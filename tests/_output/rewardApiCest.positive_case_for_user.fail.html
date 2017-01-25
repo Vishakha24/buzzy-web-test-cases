@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta charset="utf-8" />    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        CakePHP: the rapid development php framework:
+        Users    </title>
+    <link rel="icon" type="image/x-icon" href="/rewardApis/favicon.ico" /><link rel="shortcut icon" type="image/x-icon" href="/rewardApis/favicon.ico" />
+    <link href="/rewardApis/css/style.css" rel="stylesheet" />    <link href="/rewardApis/css/plugins/fontawesome/css/font-awesome.css" rel="stylesheet" />    <link href="/rewardApis/css/plugins/metisMenu/dist/metisMenu.css" rel="stylesheet" />    <link href="/rewardApis/css/plugins/animate.css/animate.css" rel="stylesheet" />    <link href="/rewardApis/css/plugins/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />    <link href="/rewardApis/css/plugins/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet" />
+    <script src="/rewardApis/js/plugins/jquery/dist/jquery.min.js"></script>    <script src="/rewardApis/js/plugins/jquery-ui/jquery-ui.min.js"></script>    <script src="/rewardApis/js/plugins/slimScroll/jquery.slimscroll.min.js"></script>    <script src="/rewardApis/js/plugins/bootstrap/dist/js/bootstrap.min.js"></script>    <script src="/rewardApis/js/plugins/jquery-flot/jquery.flot.js"></script>    <script src="/rewardApis/js/plugins/jquery-flot/jquery.flot.resize.js"></script>    <script src="/rewardApis/js/plugins/jquery-flot/jquery.flot.pie.js"></script>    <script src="/rewardApis/js/plugins/flot.curvedlines/curvedLines.js"></script>    <script src="/rewardApis/js/plugins/jquery.flot.spline/index.js"></script>    <script src="/rewardApis/js/plugins/metisMenu/dist/metisMenu.min.js"></script>    <script src="/rewardApis/js/plugins/iCheck/icheck.min.js"></script>    <script src="/rewardApis/js/plugins/peity/jquery.peity.min.js"></script>    <script src="/rewardApis/js/plugins/sparkline/index.js"></script>   
+    <script src="/rewardApis/js/homer.js"></script>    <script src="/rewardApis/js/super_admin.js"></script>    <script src="/rewardApis/js/charts.js"></script>
+            <style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
+<body>
+
+
+<!-- Header -->
+<div id="header">
+    <div class="color-line">
+    </div>
+    <div class="light-version" id="logo">
+        <span>
+            Reward Api
+        </span>
+    </div>
+    <nav role="navigation">
+        <div class="header-link hide-menu"><i class="fa fa-bars"></i></div>
+        <div class="small-logo">
+            <span class="text-primary">Reward Api</span>
+        </div>
+        <form action="#" method="post" class="navbar-form-custom" role="search">
+            <div class="form-group">
+                <input type="text" name="search" class="form-control" placeholder="Search something special" />
+            </div>
+        </form>
+        <div class="mobile-menu">
+            <button data-target="#mobile-collapse" data-toggle="collapse" class="navbar-toggle mobile-menu-toggle" type="button">
+                <i class="fa fa-chevron-down"></i>
+            </button>
+            <div id="mobile-collapse" class="collapse mobile-navbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="login.html" class="">Login</a>
+                    </li>
+                    <li>
+                        <a href="login.html" class="">Logout</a>
+                    </li>
+                    <li>
+                        <a href="profile.html" class="">Profile</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <ul class="nav navbar-nav no-borders">
+                
+                <li class="dropdown">
+                    <a data-toggle="dropdown" href="#" class="dropdown-toggle label-menu-corner">
+                        <i class="pe-7s-mail"></i>
+                        <span class="label label-success">4</span>
+                    </a>
+                    <ul class="dropdown-menu hdropdown animated flipInX">
+                        <div class="title">
+                            You have 4 new messages
+                        </div>
+                        <li>
+                            <a>
+                                Contrary to popular belief.
+                            </a>
+                        </li>
+                        <li class="summary"><a href="#">See All Messages</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                        <a class="fa fa-sign-out" href="/rewardApis/users/logout"></a>      
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<!-- Navigation -->
+<aside id="menu">
+    <div id="navigation">
+        <div class="profile-picture">
+            <a href="#">
+                <!-- <img src="img/profile.jpg" class="img-circle m-b" alt="logo"> -->
+                <img width="80px" alt="" class="img-circle m-b" src="/rewardApis/img/profile.jpeg" />            </a>
+
+            <div class="stats-label text-color">
+                <span class="font-extra-bold font-uppercase">Robert Razer</span>
+
+                <div class="dropdown">
+                    <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                        <small class="text-muted">Founder of App <b class="caret"></b></small>
+                    </a>
+                    <ul class="dropdown-menu animated flipInX m-t-xs">
+                         <li><a href="/rewardApis">Profile</a></li>
+                         <li><a href="/rewardApis/users/logout">Logout</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- <div id="sparkline1" class="small-chart m-t-sm"></div>
+                <div>
+                    <h4 class="font-extra-bold m-b-xs">
+                        $260 104,200
+                    </h4>
+                    <small class="text-muted">Your income from the last year in sales product X.</small>
+                </div> -->
+            </div>
+        </div>
+
+        <ul id="side-menu" class="nav">
+            <li class="active">
+                <a href="#"> <span class="nav-label">Dashboard</span></a>
+            </li>
+            <!-- <li>
+                <a href="analytics.html"> <span class="nav-label">Analytics</span><span class="label label-warning pull-right">NEW</span> </a>
+            </li> -->
+            <li>
+                <a href="#"><span class="nav-label">Resellers</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level collapse" aria-expanded="false">
+                     <li><a href="/rewardApis/resellers">View All</a></li>
+                     <li><a href="/rewardApis/resellers/add">Add Reseller</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><span class="nav-label">Users</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level collapse" aria-expanded="false">
+                     <li><a href="/rewardApis/users">View All</a></li>
+                     <li><a href="/rewardApis/users/add">Add User</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><span class="nav-label">Plans</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level collapse" aria-expanded="false">
+                     <li><a href="/rewardApis/plans">View All</a></li>
+                     <li><a href="/rewardApis/plans/add">Add Plan</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><span class="nav-label">Features</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level collapse" aria-expanded="false">
+                     <li><a href="/rewardApis/features">View All</a></li>
+                     <li><a href="/rewardApis/features/add">Add Feature</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><span class="nav-label">Programs</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level collapse" aria-expanded="false">
+                     <li><a href="/rewardApis/reseller-programs">View All</a></li>
+                     <li><a href="/rewardApis/reseller-programs/add">Add Program</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+</aside>
+<input type="hidden" value="http://localhost/rewardApis/" id="baseUrl" name="baseUrl" /><!-- Main Wrapper -->
+<div id="wrapper" style="min-height: 611px;">
+    <div class="users index large-9 medium-8 columns content">
+    <h3>Users</h3>
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <th scope="col"><a href="/rewardApis/users?sort=id&amp;direction=asc">Id</a></th>
+                <th scope="col"><a href="/rewardApis/users?sort=reseller_id&amp;direction=asc">Reseller</a></th>
+                <th scope="col"><a href="/rewardApis/users?sort=role_id&amp;direction=asc">Role</a></th>
+                <th scope="col"><a href="/rewardApis/users?sort=first_name&amp;direction=asc">First Name</a></th>
+                <th scope="col"><a href="/rewardApis/users?sort=last_name&amp;direction=asc">Last Name</a></th>
+                <th scope="col"><a href="/rewardApis/users?sort=username&amp;direction=asc">Username</a></th>
+                <th scope="col"><a href="/rewardApis/users?sort=email&amp;direction=asc">Email</a></th>
+                <th scope="col"><a href="/rewardApis/users?sort=phone&amp;direction=asc">Phone</a></th>
+                <th scope="col"><a href="/rewardApis/users?sort=status&amp;direction=asc">Status</a></th>
+                <th class="actions" scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+                        <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>admin</td>
+                <td>admin</td>
+                <td>admin</td>
+                <td>admin</td>
+                <td>admin@gmail.com</td>
+                <td>9999999999</td>
+                <td>1</td>
+                <td class="actions">
+                        <a class="btn btn-xs btn-success" href="/rewardApis/users/view/1">                        <i class="fa fa-eye fa-fw"></i>
+                    </a>
+                    <a "="" class="btn btn-xs btn-warning" href="/rewardApis/users/edit/1">                    <i class="fa fa-pencil fa-fw"></i>
+                    </a>
+                    <form action="/rewardApis/users/delete/1" method="post" style="display:none;" name="post_587541ea42cd4424789363"><input type="hidden" value="POST" name="_method" /></form><a onclick='if (confirm("Are you sure you want to delete # 1?")) { document.post_587541ea42cd4424789363.submit(); } event.returnValue = false; return false;' class="btn btn-sm btn-danger fa fa-trash-o fa-fh" href="#"></a> 
+                    
+                </td>
+            </tr>
+                        <tr>
+                <td>2</td>
+                <td>2</td>
+                <td>staff_admin</td>
+                <td>qwerty</td>
+                <td>qwerty</td>
+                <td>qwerty</td>
+                <td>qwerty@gmail.com</td>
+                <td>1(800)233-2742</td>
+                <td>1</td>
+                <td class="actions">
+                        <a class="btn btn-xs btn-success" href="/rewardApis/users/view/2">                        <i class="fa fa-eye fa-fw"></i>
+                    </a>
+                    <a "="" class="btn btn-xs btn-warning" href="/rewardApis/users/edit/2">                    <i class="fa fa-pencil fa-fw"></i>
+                    </a>
+                    <form action="/rewardApis/users/delete/2" method="post" style="display:none;" name="post_587541ea42f08851696099"><input type="hidden" value="POST" name="_method" /></form><a onclick='if (confirm("Are you sure you want to delete # 2?")) { document.post_587541ea42f08851696099.submit(); } event.returnValue = false; return false;' class="btn btn-sm btn-danger fa fa-trash-o fa-fh" href="#"></a> 
+                    
+                </td>
+            </tr>
+                        <tr>
+                <td>3</td>
+                <td>3</td>
+                <td>staff_admin</td>
+                <td>SDFGHJ</td>
+                <td>werty</td>
+                <td>asdf</td>
+                <td>asdf@gmail.com</td>
+                <td>1234567890</td>
+                <td>1</td>
+                <td class="actions">
+                        <a class="btn btn-xs btn-success" href="/rewardApis/users/view/3">                        <i class="fa fa-eye fa-fw"></i>
+                    </a>
+                    <a "="" class="btn btn-xs btn-warning" href="/rewardApis/users/edit/3">                    <i class="fa fa-pencil fa-fw"></i>
+                    </a>
+                    <form action="/rewardApis/users/delete/3" method="post" style="display:none;" name="post_587541ea42fd9149356501"><input type="hidden" value="POST" name="_method" /></form><a onclick='if (confirm("Are you sure you want to delete # 3?")) { document.post_587541ea42fd9149356501.submit(); } event.returnValue = false; return false;' class="btn btn-sm btn-danger fa fa-trash-o fa-fh" href="#"></a> 
+                    
+                </td>
+            </tr>
+                        <tr>
+                <td>5</td>
+                <td>6</td>
+                <td>staff_admin</td>
+                <td>edrfgyujk</td>
+                <td>qwertfyh</td>
+                <td>wqertyui</td>
+                <td>asdfgg@mail.com</td>
+                <td>1234567890</td>
+                <td></td>
+                <td class="actions">
+                        <a class="btn btn-xs btn-success" href="/rewardApis/users/view/5">                        <i class="fa fa-eye fa-fw"></i>
+                    </a>
+                    <a "="" class="btn btn-xs btn-warning" href="/rewardApis/users/edit/5">                    <i class="fa fa-pencil fa-fw"></i>
+                    </a>
+                    <form action="/rewardApis/users/delete/5" method="post" style="display:none;" name="post_587541ea43093989915953"><input type="hidden" value="POST" name="_method" /></form><a onclick='if (confirm("Are you sure you want to delete # 5?")) { document.post_587541ea43093989915953.submit(); } event.returnValue = false; return false;' class="btn btn-sm btn-danger fa fa-trash-o fa-fh" href="#"></a> 
+                    
+                </td>
+            </tr>
+                        <tr>
+                <td>6</td>
+                <td>1</td>
+                <td>admin</td>
+                <td>wertyui</td>
+                <td>drfghjk</td>
+                <td>werty</td>
+                <td>asdfg@asdfgh.co</td>
+                <td>1234567890</td>
+                <td></td>
+                <td class="actions">
+                        <a class="btn btn-xs btn-success" href="/rewardApis/users/view/6">                        <i class="fa fa-eye fa-fw"></i>
+                    </a>
+                    <a "="" class="btn btn-xs btn-warning" href="/rewardApis/users/edit/6">                    <i class="fa fa-pencil fa-fw"></i>
+                    </a>
+                    <form action="/rewardApis/users/delete/6" method="post" style="display:none;" name="post_587541ea4313e922530273"><input type="hidden" value="POST" name="_method" /></form><a onclick='if (confirm("Are you sure you want to delete # 6?")) { document.post_587541ea4313e922530273.submit(); } event.returnValue = false; return false;' class="btn btn-sm btn-danger fa fa-trash-o fa-fh" href="#"></a> 
+                    
+                </td>
+            </tr>
+                        <tr>
+                <td>8</td>
+                <td>1</td>
+                <td>staff_admin</td>
+                <td>mnbv</td>
+                <td>mnbv</td>
+                <td>mnbv</td>
+                <td>mnbv@gmail.co</td>
+                <td>1234567890</td>
+                <td>1</td>
+                <td class="actions">
+                        <a class="btn btn-xs btn-success" href="/rewardApis/users/view/8">                        <i class="fa fa-eye fa-fw"></i>
+                    </a>
+                    <a "="" class="btn btn-xs btn-warning" href="/rewardApis/users/edit/8">                    <i class="fa fa-pencil fa-fw"></i>
+                    </a>
+                    <form action="/rewardApis/users/delete/8" method="post" style="display:none;" name="post_587541ea431e5475602196"><input type="hidden" value="POST" name="_method" /></form><a onclick='if (confirm("Are you sure you want to delete # 8?")) { document.post_587541ea431e5475602196.submit(); } event.returnValue = false; return false;' class="btn btn-sm btn-danger fa fa-trash-o fa-fh" href="#"></a> 
+                    
+                </td>
+            </tr>
+                    </tbody>
+    </table>
+    <div class="paginator">
+        <ul class="pagination">
+                        <li class="prev disabled"><a onclick="return false;" href="">&lt; previous</a></li>                        <li class="next disabled"><a onclick="return false;" href="">next &gt;</a></li>                    </ul>
+        <p>Page 1 of 1, showing 6 record(s) out of 6 total</p>
+    </div>
+</div>
+    <footer class="footer">
+        <span class="pull-right">
+            Rewards Api
+        </span>
+        2017
+</footer></div>
+<script src="/rewardApis/debug_kit/js/toolbar.js" data-url="http://localhost/rewardApis/" data-id="d653e5fa-f084-45cd-83af-f873d399ed97" id="__debug_kit"></script>
+<iframe width="40" height="40" style="position: fixed; bottom: 0px; right: 0px; border: 0px none; outline: 0px none; overflow: hidden; z-index: 99999;" src="http://localhost/rewardApis/debug_kit/toolbar/d653e5fa-f084-45cd-83af-f873d399ed97"></iframe></body><canvas id="fxdriver-screenshot-canvas" style="display: none;" width="1316" height="673"></canvas></html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta charset="utf-8" />    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        CakePHP: the rapid development php framework:
+        Resellers    </title>
+    <link rel="icon" type="image/x-icon" href="/rewardApis/favicon.ico" /><link rel="shortcut icon" type="image/x-icon" href="/rewardApis/favicon.ico" />
+    <link href="/rewardApis/css/style.css" rel="stylesheet" />    <link href="/rewardApis/css/plugins/fontawesome/css/font-awesome.css" rel="stylesheet" />    <link href="/rewardApis/css/plugins/metisMenu/dist/metisMenu.css" rel="stylesheet" />    <link href="/rewardApis/css/plugins/animate.css/animate.css" rel="stylesheet" />    <link href="/rewardApis/css/plugins/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />    <link href="/rewardApis/css/plugins/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet" />    <link href="/rewardApis/css/plugins/toastr/build/toastr.min.css" rel="stylesheet" />    <script src="/rewardApis/js/plugins/jquery/dist/jquery.min.js"></script>    <script src="/rewardApis/js/plugins/jquery-ui/jquery-ui.min.js"></script>    <script src="/rewardApis/js/plugins/slimScroll/jquery.slimscroll.min.js"></script>    <script src="/rewardApis/js/plugins/bootstrap/dist/js/bootstrap.min.js"></script>    <script src="/rewardApis/js/plugins/jquery-flot/jquery.flot.js"></script>    <script src="/rewardApis/js/plugins/jquery-flot/jquery.flot.resize.js"></script>    <script src="/rewardApis/js/plugins/jquery-flot/jquery.flot.pie.js"></script>    <script src="/rewardApis/js/plugins/flot.curvedlines/curvedLines.js"></script>    <script src="/rewardApis/js/plugins/jquery.flot.spline/index.js"></script>    <script src="/rewardApis/js/plugins/metisMenu/dist/metisMenu.min.js"></script>    <script src="/rewardApis/js/plugins/iCheck/icheck.min.js"></script>    <script src="/rewardApis/js/plugins/peity/jquery.peity.min.js"></script>    <script src="/rewardApis/js/plugins/sparkline/index.js"></script>    <script src="/rewardApis/js/plugins/toastr/build/toastr.min.js"></script>   
+    <script src="/rewardApis/js/homer.js"></script>    <script src="/rewardApis/js/super_admin.js"></script>    <script src="/rewardApis/js/charts.js"></script>
+            <style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
+<body>
+
+
+<!-- Header -->
+<div id="header">
+    <div class="color-line">
+    </div>
+    <div class="light-version" id="logo">
+        <span>
+            Reward Api
+        </span>
+    </div>
+    <nav role="navigation">
+        <div class="header-link hide-menu"><i class="fa fa-bars"></i></div>
+        <div class="small-logo">
+            <span class="text-primary">Reward Api</span>
+        </div>
+        <form action="#" method="post" class="navbar-form-custom" role="search">
+            <div class="form-group">
+                <input type="text" name="search" class="form-control" placeholder="Search something special" />
+            </div>
+        </form>
+        <div class="mobile-menu">
+            <button data-target="#mobile-collapse" data-toggle="collapse" class="navbar-toggle mobile-menu-toggle" type="button">
+                <i class="fa fa-chevron-down"></i>
+            </button>
+            <div id="mobile-collapse" class="collapse mobile-navbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="login.html" class="">Login</a>
+                    </li>
+                    <li>
+                        <a href="login.html" class="">Logout</a>
+                    </li>
+                    <li>
+                        <a href="profile.html" class="">Profile</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <ul class="nav navbar-nav no-borders">
+                
+                <li class="dropdown">
+                    <a data-toggle="dropdown" href="#" class="dropdown-toggle label-menu-corner">
+                        <i class="pe-7s-mail"></i>
+                        <span class="label label-success">4</span>
+                    </a>
+                    <ul class="dropdown-menu hdropdown animated flipInX">
+                        <div class="title">
+                            You have 4 new messages
+                        </div>
+                        <li>
+                            <a>
+                                Contrary to popular belief.
+                            </a>
+                        </li>
+                        <li class="summary"><a href="#">See All Messages</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                        <a class="fa fa-sign-out" href="/rewardApis/users/logout"></a>      
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<!-- Navigation -->
+<aside id="menu">
+    <div id="navigation">
+        <div class="profile-picture">
+            <a href="#">
+                <!-- <img src="img/profile.jpg" class="img-circle m-b" alt="logo"> -->
+                <img width="80px" alt="" class="img-circle m-b" src="/rewardApis/img/profile.jpeg" />            </a>
+
+            <div class="stats-label text-color">
+                <span class="font-extra-bold font-uppercase">Robert Razer</span>
+
+                <div class="dropdown">
+                    <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                        <small class="text-muted">Founder of App <b class="caret"></b></small>
+                    </a>
+                    <ul class="dropdown-menu animated flipInX m-t-xs">
+                         <li><a href="/rewardApis/add">Profile</a></li>
+                         <li><a href="/rewardApis/users/logout">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <ul id="side-menu" class="nav">
+            <li class="active">
+                <a href="#"> <span class="nav-label">Dashboard</span></a>
+            </li>
+            <!-- <li>
+                <a href="analytics.html"> <span class="nav-label">Analytics</span><span class="label label-warning pull-right">NEW</span> </a>
+            </li> -->
+            <li>
+                <a href="#"><span class="nav-label">Resellers</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level collapse" aria-expanded="false">
+                     <li><a href="/rewardApis/resellers">View All</a></li>
+                     <li><a href="/rewardApis/resellers/add">Add Reseller</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><span class="nav-label">Users</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level collapse" aria-expanded="false">
+                     <li><a href="/rewardApis/users">View All</a></li>
+                     <li><a href="/rewardApis/users/add">Add User</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><span class="nav-label">Plans</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level collapse" aria-expanded="false">
+                     <li><a href="/rewardApis/plans">View All</a></li>
+                     <li><a href="/rewardApis/plans/add">Add Plan</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><span class="nav-label">Features</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level collapse" aria-expanded="false">
+                     <li><a href="/rewardApis/features">View All</a></li>
+                     <li><a href="/rewardApis/features/add">Add Feature</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><span class="nav-label">Roles</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level collapse" aria-expanded="false">
+                     <li><a href="/rewardApis/roles">View All</a></li>
+                     <li><a href="/rewardApis/roles/add">Add Role</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><span class="nav-label">Programs</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level collapse" aria-expanded="false">
+                     <li><a href="/rewardApis/reseller-programs">View All</a></li>
+                     <li><a href="/rewardApis/reseller-programs/add">Add Program</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+</aside>
+<input type="hidden" value="http://localhost/rewardApis/" id="baseUrl" name="baseUrl" /><!-- Main Wrapper -->
+<div id="wrapper" style="min-height: 611px;">
+                <div class="row">
+<div class="col-lg-12">
+    <div class="hpanel">
+        <div class="panel-body">
+            <div class="panel-heading">
+                <h5>Add Resellor</h5>
+            </div>
+            <form action="/rewardApis/resellers/add" class="form-horizontal" data-toggle="validator" accept-charset="utf-8" enctype="multipart/form-data" method="post"><div style="display:none;"><input type="hidden" value="POST" name="_method" /></div>            
+                <div class="form-group">
+                    <label for="name" class="col-sm-2 control-label">Organization Name</label>                    <div class="col-sm-10">
+                       <div class="input text required"><input type="text" id="org-name" maxlength="255" class="form-control" required="required" name="org_name" /></div>                    </div>
+                </div>
+                <div class="hr-line-dashed"></div>
+                   <div class="form-group">
+                    <label for="name" class="col-sm-2 control-label">Reseller Plan</label>                    <div class="col-sm-10">
+
+                       <pre class="cake-error"><a onclick="document.getElementById('cakeErr58773fbc66d53-trace').style.display = (document.getElementById('cakeErr58773fbc66d53-trace').style.display == 'none' ? '' : 'none');" href="javascript:void(0);"><b>Notice</b> (8)</a>: Undefined variable: plans [<b>APP/Template/Resellers/add.ctp</b>, line <b>21</b>]<div style="display: none;" class="cake-stack-trace" id="cakeErr58773fbc66d53-trace"><a onclick="document.getElementById('cakeErr58773fbc66d53-code').style.display = (document.getElementById('cakeErr58773fbc66d53-code').style.display == 'none' ? '' : 'none')" href="javascript:void(0);">Code</a> <a onclick="document.getElementById('cakeErr58773fbc66d53-context').style.display = (document.getElementById('cakeErr58773fbc66d53-context').style.display == 'none' ? '' : 'none')" href="javascript:void(0);">Context</a><pre style="display: none;" class="cake-code-dump" id="cakeErr58773fbc66d53-code"><code><span style="color: #000000"><span style="color: #0000BB">                    </span><span style="color: #007700">&lt;</span><span style="color: #0000BB">div </span><span style="color: #007700">class=</span><span style="color: #DD0000">"col-sm-10"</span><span style="color: #007700">&gt;</span></span></code>
+<span class="code-highlight"><code><span style="color: #000000"><span style="color: #0000BB"></span></span></code></span>
+<code><span style="color: #000000"><span style="color: #0000BB">                       </span><span style="color: #007700">&lt;?= </span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Form</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">select</span><span style="color: #007700">(</span><span style="color: #DD0000">'reseller_plans.plan_id'</span><span style="color: #007700">, </span><span style="color: #0000BB">$plans </span><span style="color: #007700">,[</span><span style="color: #DD0000">'label' </span><span style="color: #007700">=&gt; </span><span style="color: #0000BB">false</span><span style="color: #007700">, </span><span style="color: #DD0000">'class' </span><span style="color: #007700">=&gt; [</span><span style="color: #DD0000">'form-control'</span><span style="color: #007700">]]); </span><span style="color: #0000BB">?&gt;</span></span></code></pre><pre style="display: none;" class="cake-context" id="cakeErr58773fbc66d53-context">$viewFile = '/var/www/html/rewardApis/src/Template/Resellers/add.ctp'
+$dataForView = [
+	'_serialize' =&gt; [
+		(int) 0 =&gt; 'reseller'
+	],
+	'reseller' =&gt; object(App\Model\Entity\Reseller) {
+
+		'[new]' =&gt; true,
+		'[accessible]' =&gt; [
+			[maximum depth reached]
+		],
+		'[dirty]' =&gt; [[maximum depth reached]],
+		'[original]' =&gt; [[maximum depth reached]],
+		'[virtual]' =&gt; [[maximum depth reached]],
+		'[errors]' =&gt; [[maximum depth reached]],
+		'[invalid]' =&gt; [[maximum depth reached]],
+		'[repository]' =&gt; 'Resellers'
+	
+	}
+]
+$_serialize = [
+	(int) 0 =&gt; 'reseller'
+]
+$reseller = object(App\Model\Entity\Reseller) {
+
+	'[new]' =&gt; true,
+	'[accessible]' =&gt; [
+		'*' =&gt; true
+	],
+	'[dirty]' =&gt; [],
+	'[original]' =&gt; [],
+	'[virtual]' =&gt; [],
+	'[errors]' =&gt; [],
+	'[invalid]' =&gt; [],
+	'[repository]' =&gt; 'Resellers'
+
+}</pre><pre class="stack-trace">include - APP/Template/Resellers/add.ctp, line 21
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1014
+Cake\View\View::_render() - CORE/src/View/View.php, line 973
+Cake\View\View::render() - CORE/src/View/View.php, line 597
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 127
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 95
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 83
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 62
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 81
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 90</pre></div></pre><select class="form-control" name="reseller_plans[plan_id]"></select>                    </div>
+                </div>
+                <div class="hr-line-dashed"></div>
+                <div class="form-group">
+                <label for="image-path" id="upload-img" class="col-sm-2 control-label">Image Upload</label>
+                    <div class="col-sm-4">
+                        <div class="img-thumbnail">
+                            <img width="100" height="100" alt="" id="upload-img" src="http://localhost/rewardApis/img/default-img.jpeg" />                        </div>
+                        <br /> <br />
+                        <div class="input file required"><input type="file" id="imgChange" form-control="form-control" required="required" accept="image/*" name="image_name" /></div>                    </div>
+                </div>
+                <div class="hr-line-dashed"></div>
+                <div class="form-group">
+                <label for="status" class="col-sm-2 control-label">Status</label>                    <div class="col-sm-10">
+                        <div class="input checkbox"><input type="hidden" value="0" name="status" /><input type="checkbox" id="status" class="form-control m-b" value="1" name="status" /></div>                    </div>
+                </div>
+
+                <div class="panel-heading">
+                <h5>Add Staff Admin</h5>
+                </div>
+                <div class="hr-line-dashed"></div>
+                   <div class="form-group">
+                    <label for="last-name" class="col-sm-2 control-label">Last Name</label>                    <div class="col-sm-10">
+                       <div class="input text required"><input type="text" id="user-last-name" class="form-control" required="required" name="user[last_name]" /></div>                    </div>
+                </div>
+                <div class="hr-line-dashed"></div>
+                <div class="form-group">
+                <label for="first-name" class="col-sm-2 control-label">First Name</label>                    <div class="col-sm-10">
+                       <div class="input text required"><input type="text" id="user-first-name" class="form-control" required="required" name="user[first_name]" /></div>                    </div>
+                </div>
+                <div class="hr-line-dashed"></div>
+                <div class="form-group">
+                    <label for="email" class="col-sm-2 control-label">Email</label>                    <div class="col-sm-10">
+                       <div class="input email required"><input type="email" id="user-email" class="form-control" required="required" name="user[email]" /></div>                    </div>
+                </div>
+                <div class="hr-line-dashed"></div>
+                <div class="form-group">
+                    <label for="username" class="col-sm-2 control-label">Username</label>                    <div class="col-sm-10">
+                       <div class="input text required"><input type="text" id="user-username" class="form-control" required="required" name="user[username]" /></div>                    </div>
+                </div>
+                <div class="hr-line-dashed"></div>
+                 <div class="form-group">
+                    <label for="password" class="col-sm-2 control-label">Password</label>                    <div class="col-sm-10">
+                       <div class="input password required"><input type="password" id="user-password" class="form-control" required="required" data-minlength="8" name="user[password]" /></div>                       <div class="help-block">Minimum of 8 characters</div>
+                    </div>
+                </div>
+                <div class="hr-line-dashed"></div>
+                <div class="form-group">
+                    <label for="phone" class="col-sm-2 control-label">Phone</label>                    <div class="col-sm-10">
+                       <div class="input tel required"><input type="tel" id="user-phone" class="form-control" placeholder="1(800)233-2742" required="required" name="user[phone]" /></div>                    </div>
+                </div>
+                <div class="hr-line-dashed"></div>
+
+                <div class="form-group">
+                    <div class="col-sm-8 col-sm-offset-2">
+                    <button type="submit" class="btn btn-primary" id="check_submit">Submit</button>                    <a class="btn btn-danger" id="check_cancel" href="http://localhost/rewardApis/users">Cancel</a>                    </div>
+                </div>
+            </form>        </div>
+    </div>
+</div>
+</div>
+<style type="text/style">
+.img-thumbnail {
+background: #fff none repeat scroll 0 0;
+height: 200px;
+margin: 10px 5px;
+padding: 0;
+position: relative;
+width: 200px;
+}
+.img-thumbnail img {
+border: 1px solid #dcdcdc;
+max-width: 100%;
+object-fit: cover;
+}
+</style>
+<script type="text/javascript">
+    /**
+    * @method uploadImage
+    @return null
+    */    
+    function uploadImage(input) {
+        if (input.files &amp;&amp; input.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function (e) {
+                $('#upload-img').attr('src', e.target.result);
+            }
+            
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    
+    $("#imgChange").change(function(){
+        uploadImage(this);
+    });
+</script>    <footer class="footer">
+        <span class="pull-right">
+            Rewards Api
+        </span>
+        2017
+</footer></div>
+<script src="/rewardApis/debug_kit/js/toolbar.js" data-url="http://localhost/rewardApis/" data-id="89d9645d-7bd0-4758-b0ab-73025a39e904" id="__debug_kit"></script>
+<iframe width="40" height="40" style="position: fixed; bottom: 0px; right: 0px; border: 0px none; outline: 0px none; overflow: hidden; z-index: 99999;" src="http://localhost/rewardApis/debug_kit/toolbar/89d9645d-7bd0-4758-b0ab-73025a39e904"></iframe></body><canvas id="fxdriver-screenshot-canvas" style="display: none;" width="1300" height="1257"></canvas></html>

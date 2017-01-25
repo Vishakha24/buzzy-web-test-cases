@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta charset="utf-8" />    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        CakePHP: the rapid development php framework:
+        Resellers    </title>
+    <link rel="icon" type="image/x-icon" href="/rewardApis/favicon.ico" /><link rel="shortcut icon" type="image/x-icon" href="/rewardApis/favicon.ico" />
+    <link href="/rewardApis/css/style.css" rel="stylesheet" />    <link href="/rewardApis/css/plugins/fontawesome/css/font-awesome.css" rel="stylesheet" />    <link href="/rewardApis/css/plugins/metisMenu/dist/metisMenu.css" rel="stylesheet" />    <link href="/rewardApis/css/plugins/animate.css/animate.css" rel="stylesheet" />    <link href="/rewardApis/css/plugins/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />    <link href="/rewardApis/css/plugins/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet" />
+    <script src="/rewardApis/js/plugins/jquery/dist/jquery.min.js"></script>    <script src="/rewardApis/js/plugins/jquery-ui/jquery-ui.min.js"></script>    <script src="/rewardApis/js/plugins/slimScroll/jquery.slimscroll.min.js"></script>    <script src="/rewardApis/js/plugins/bootstrap/dist/js/bootstrap.min.js"></script>    <script src="/rewardApis/js/plugins/jquery-flot/jquery.flot.js"></script>    <script src="/rewardApis/js/plugins/jquery-flot/jquery.flot.resize.js"></script>    <script src="/rewardApis/js/plugins/jquery-flot/jquery.flot.pie.js"></script>    <script src="/rewardApis/js/plugins/flot.curvedlines/curvedLines.js"></script>    <script src="/rewardApis/js/plugins/jquery.flot.spline/index.js"></script>    <script src="/rewardApis/js/plugins/metisMenu/dist/metisMenu.min.js"></script>    <script src="/rewardApis/js/plugins/iCheck/icheck.min.js"></script>    <script src="/rewardApis/js/plugins/peity/jquery.peity.min.js"></script>    <script src="/rewardApis/js/plugins/sparkline/index.js"></script>   
+    <script src="/rewardApis/js/homer.js"></script>    <script src="/rewardApis/js/super_admin.js"></script>    <script src="/rewardApis/js/charts.js"></script>
+            <style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
+<body>
+
+
+<!-- Header -->
+<div id="header">
+    <div class="color-line">
+    </div>
+    <div class="light-version" id="logo">
+        <span>
+            Reward Api
+        </span>
+    </div>
+    <nav role="navigation">
+        <div class="header-link hide-menu"><i class="fa fa-bars"></i></div>
+        <div class="small-logo">
+            <span class="text-primary">Reward Api</span>
+        </div>
+        <form action="#" method="post" class="navbar-form-custom" role="search">
+            <div class="form-group">
+                <input type="text" name="search" class="form-control" placeholder="Search something special" />
+            </div>
+        </form>
+        <div class="mobile-menu">
+            <button data-target="#mobile-collapse" data-toggle="collapse" class="navbar-toggle mobile-menu-toggle" type="button">
+                <i class="fa fa-chevron-down"></i>
+            </button>
+            <div id="mobile-collapse" class="collapse mobile-navbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="login.html" class="">Login</a>
+                    </li>
+                    <li>
+                        <a href="login.html" class="">Logout</a>
+                    </li>
+                    <li>
+                        <a href="profile.html" class="">Profile</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <ul class="nav navbar-nav no-borders">
+                
+                <li class="dropdown">
+                    <a data-toggle="dropdown" href="#" class="dropdown-toggle label-menu-corner">
+                        <i class="pe-7s-mail"></i>
+                        <span class="label label-success">4</span>
+                    </a>
+                    <ul class="dropdown-menu hdropdown animated flipInX">
+                        <div class="title">
+                            You have 4 new messages
+                        </div>
+                        <li>
+                            <a>
+                                Contrary to popular belief.
+                            </a>
+                        </li>
+                        <li class="summary"><a href="#">See All Messages</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                        <a class="fa fa-sign-out" href="/rewardApis/users/logout"></a>      
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<!-- Navigation -->
+<aside id="menu">
+    <div id="navigation">
+        <div class="profile-picture">
+            <a href="#">
+                <!-- <img src="img/profile.jpg" class="img-circle m-b" alt="logo"> -->
+                <img width="80px" alt="" class="img-circle m-b" src="/rewardApis/img/profile.jpeg" />            </a>
+
+            <div class="stats-label text-color">
+                <span class="font-extra-bold font-uppercase">Robert Razer</span>
+
+                <div class="dropdown">
+                    <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                        <small class="text-muted">Founder of App <b class="caret"></b></small>
+                    </a>
+                    <ul class="dropdown-menu animated flipInX m-t-xs">
+                         <li><a href="/rewardApis/view">Profile</a></li>
+                         <li><a href="/rewardApis/users/logout">Logout</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- <div id="sparkline1" class="small-chart m-t-sm"></div>
+                <div>
+                    <h4 class="font-extra-bold m-b-xs">
+                        $260 104,200
+                    </h4>
+                    <small class="text-muted">Your income from the last year in sales product X.</small>
+                </div> -->
+            </div>
+        </div>
+
+        <ul id="side-menu" class="nav">
+            <li class="active">
+                <a href="#"> <span class="nav-label">Dashboard</span></a>
+            </li>
+            <!-- <li>
+                <a href="analytics.html"> <span class="nav-label">Analytics</span><span class="label label-warning pull-right">NEW</span> </a>
+            </li> -->
+            <li>
+                <a href="#"><span class="nav-label">Resellers</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level collapse" aria-expanded="false">
+                     <li><a href="/rewardApis/resellers">View All</a></li>
+                     <li><a href="/rewardApis/resellers/add">Add Reseller</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><span class="nav-label">Users</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level collapse" aria-expanded="false">
+                     <li><a href="/rewardApis/users">View All</a></li>
+                     <li><a href="/rewardApis/users/add">Add User</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><span class="nav-label">Plans</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level collapse" aria-expanded="false">
+                     <li><a href="/rewardApis/plans">View All</a></li>
+                     <li><a href="/rewardApis/plans/add">Add Plan</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><span class="nav-label">Features</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level collapse" aria-expanded="false">
+                     <li><a href="/rewardApis/features">View All</a></li>
+                     <li><a href="/rewardApis/features/add">Add Feature</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><span class="nav-label">Programs</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level collapse" aria-expanded="false">
+                     <li><a href="/rewardApis/reseller-programs">View All</a></li>
+                     <li><a href="/rewardApis/reseller-programs/add">Add Program</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+</aside>
+<input type="hidden" value="http://localhost/rewardApis/" id="baseUrl" name="baseUrl" /><!-- Main Wrapper -->
+<div id="wrapper" style="min-height: 611px;">
+    <div class="row">
+<div class="col-lg-9">
+    <div class="wrapper wrapper-content animated fadeInUp">
+        <div class="ibox">
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="m-b-md">
+                            <h2>sertyuiq</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <dl class="dl-horizontal">
+                            <dt>Reseller Name:</dt> <dd> <span class="label label-primary">sertyuiq</span> </dd><br />
+                            <dt>Image:</dt> <dd> <a target="_blank" }"="" []="" "reseller_programs":="" ],="" }="" null="" "b9c85786-6190-4987-8799-98ef1c732ab9",="" "uuid":="" "1234567890",="" "phone":="" "asdfgg@mail.com",="" "email":="" "wqertyui",="" "username":="" "qwertfyh",="" "last_name":="" "edrfgyujk",="" "first_name":="" 2,="" "role_id":="" "reseller_id":="" 5,="" "id":="" {="" [="" "users":="" null,="" "is_deleted":="" "modified":="" "2017-01-10t18:11:40+00:00",="" "created":="" "1484071900stockfresh_2977963.jpeg",="" "image_name":="" reseller_images",="" "webroot\="" "image_path":="" false,="" "status":="" "sertyuiq",="" "org_name":="" 6,="" id":="" href="%7B%0A%20%20%20%20"><img width="100" height="100" alt="" src="http://localhost/rewardApis/reseller_images/1484071900stockfresh_2977963.jpeg" /></a></dd><br />
+                            <dt>Status:</dt> <dd>Disabled</dd><br />
+                            </dl>
+                        </div>
+                    </div> 
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                        <a class="btn btn-warning" href="http://localhost/rewardApis/resellers">Back</a>                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>    <footer class="footer">
+        <span class="pull-right">
+            Rewards Api
+        </span>
+        2017
+</footer></div>
+<script src="/rewardApis/debug_kit/js/toolbar.js" data-url="http://localhost/rewardApis/" data-id="8d68852d-3534-4eca-86f0-c9fa4f89b26c" id="__debug_kit"></script>
+<iframe width="40" height="40" style="position: fixed; bottom: 0px; right: 0px; border: 0px none; outline: 0px none; overflow: hidden; z-index: 99999;" src="http://localhost/rewardApis/debug_kit/toolbar/8d68852d-3534-4eca-86f0-c9fa4f89b26c"></iframe></body><canvas id="fxdriver-screenshot-canvas" style="display: none;" width="1316" height="673"></canvas></html>

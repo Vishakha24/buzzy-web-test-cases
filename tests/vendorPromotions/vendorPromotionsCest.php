@@ -25,14 +25,14 @@ class vendorPromotionsCest
         
     // }
 
-    public function negative_case_for_promotions(VendorPromotionsTester $I)
-    {
-       $I->login('damon', '12345678');
-       $I->negative_case_for_add_view_promotions('Promotion 1', 'PromoDesc 1', 30, 7, 50);
-       $I->click('Settings');
-       $I->negative_case_for_edit_delete_vendor_promotions(45, 50);
-       $I->positive_vendor_promotions_checkboxChecked_edit(28); 
-    }
+    // public function negative_case_for_promotions(VendorPromotionsTester $I)
+    // {
+    //    $I->login('damon', '12345678');
+    //    $I->negative_case_for_add_view_promotions('Promotion 1', 'PromoDesc 1', 30, 7, 50);
+    //    $I->click('Settings');
+    //    $I->negative_case_for_edit_delete_vendor_promotions(45, 50);
+    //    $I->positive_vendor_promotions_checkboxChecked_edit(28); 
+    // }
 
     // public function positive_case_for_templates(VendorPromotionsTester $I)
     // {
@@ -90,4 +90,45 @@ class vendorPromotionsCest
     //     $I->add_creditCardCharge('4444 2222 1111 3333', '0719', '789', 'Damon', 'Damon', 'United States of America', '201010', 'b-4, DamonVilla', 'blabla', 'asdfgh', '9876543212');
     //     $I->edit_credictCardSetUp('765', '9876543356');
     // }
+
+    public function vendor_deposit_balance(VendorPromotionsTester $I)
+    {
+        $I->login('admin', '123456789');
+        $I->vendor_deposit_balance('Charizad');
+    }
+
+    public function credit_card_charge(VendorPromotionsTester $I)
+    {
+        $I->login('admin', '123456789');
+        $I->credit_card_charge('explorer');
+
+    }
+
+    public function vendor_survey_questions(VendorPromotionsTester $I)
+    {
+        $I->login('admin', '123456789');
+        $I->vendor_survey_questions(1, 100, 45, 37, 20);
+    }
+
+    public function edit_selected_vendor_promotions(VendorPromotionsTester $I)
+    {
+        $I->login('admin', '123456789');
+        $I->edit_selected_vendor_promotions('Venasaur', 100, 40);
+    }
+
+    public function positive_case_for_survey_questions(VendorPromotionsTester $I)
+    {
+        $I->login('admin', '123456789');
+        $I->survey_questions('Survey  One', 'Test question edited', 50);
+        $I->edit_survey_questions('Add Survey', 100);
+
+    }
+
+    public function negative_case_for_survey_questions(VendorPromotionsTester $I)
+    {
+        $I->login('admin', '123456789');
+        $I->negative_case_for_add_view_survey_questions('Survey  One', 'Test question edited', 50);
+        $I->negative_case_for_edit_delete_survey_questions('Add Survey', 100);
+
+    }
 }

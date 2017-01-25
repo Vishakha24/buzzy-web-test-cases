@@ -1,0 +1,8 @@
+class_name: RewardApiTester
+modules:
+    enabled:
+        - Asserts
+        - WebDriver:
+            url: http://localhost/rewardApis/
+            browser: firefox
+        - \Helper\RewardApi

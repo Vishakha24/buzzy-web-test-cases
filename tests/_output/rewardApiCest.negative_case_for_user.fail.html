@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta charset="utf-8" />    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        CakePHP: the rapid development php framework:
+        Users    </title>
+    <link rel="icon" type="image/x-icon" href="/rewardApis/favicon.ico" /><link rel="shortcut icon" type="image/x-icon" href="/rewardApis/favicon.ico" />
+    <link href="/rewardApis/css/style.css" rel="stylesheet" />    <link href="/rewardApis/css/plugins/fontawesome/css/font-awesome.css" rel="stylesheet" />    <link href="/rewardApis/css/plugins/metisMenu/dist/metisMenu.css" rel="stylesheet" />    <link href="/rewardApis/css/plugins/animate.css/animate.css" rel="stylesheet" />    <link href="/rewardApis/css/plugins/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />    <link href="/rewardApis/css/plugins/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet" />    <link href="/rewardApis/css/plugins/toastr/build/toastr.min.css" rel="stylesheet" />    <script src="/rewardApis/js/plugins/jquery/dist/jquery.min.js"></script>    <script src="/rewardApis/js/plugins/jquery-ui/jquery-ui.min.js"></script>    <script src="/rewardApis/js/plugins/slimScroll/jquery.slimscroll.min.js"></script>    <script src="/rewardApis/js/plugins/bootstrap/dist/js/bootstrap.min.js"></script>    <script src="/rewardApis/js/plugins/jquery-flot/jquery.flot.js"></script>    <script src="/rewardApis/js/plugins/jquery-flot/jquery.flot.resize.js"></script>    <script src="/rewardApis/js/plugins/jquery-flot/jquery.flot.pie.js"></script>    <script src="/rewardApis/js/plugins/flot.curvedlines/curvedLines.js"></script>    <script src="/rewardApis/js/plugins/jquery.flot.spline/index.js"></script>    <script src="/rewardApis/js/plugins/metisMenu/dist/metisMenu.min.js"></script>    <script src="/rewardApis/js/plugins/iCheck/icheck.min.js"></script>    <script src="/rewardApis/js/plugins/peity/jquery.peity.min.js"></script>    <script src="/rewardApis/js/plugins/sparkline/index.js"></script>    <script src="/rewardApis/js/plugins/toastr/build/toastr.min.js"></script>   
+    <script src="/rewardApis/js/homer.js"></script>    <script src="/rewardApis/js/super_admin.js"></script>    <script src="/rewardApis/js/charts.js"></script>    <script src="/rewardApis/js/icheck.min.js"></script>
+            <style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
+<body>
+
+
+<!-- Header -->
+<div id="header">
+    <div class="color-line">
+    </div>
+    <div class="light-version" id="logo">
+        <span>
+            Reward Api
+        </span>
+    </div>
+    <nav role="navigation">
+        <div class="header-link hide-menu"><i class="fa fa-bars"></i></div>
+        <div class="small-logo">
+            <span class="text-primary">Reward Api</span>
+        </div>
+        
+        <div class="mobile-menu">
+            <div id="mobile-collapse" class="collapse mobile-navbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="login.html" class="">Login</a>
+                    </li>
+                    <li>
+                        <a href="login.html" class="">Logout</a>
+                    </li>
+                    <li>
+                        <a href="profile.html" class="">Profile</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <ul class="nav navbar-nav no-borders">
+                
+                <li class="dropdown">
+                        <a class="fa fa-sign-out" href="/rewardApis/users/logout"></a>      
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div><!-- Navigation -->
+<aside id="menu">
+    <div id="navigation">
+        <div class="profile-picture">
+            <a href="#">
+                <!-- <img src="img/profile.jpg" class="img-circle m-b" alt="logo"> -->
+                <img width="80px" alt="" class="img-circle m-b" src="/rewardApis/img/profile.jpeg" />            </a>
+
+            <div class="stats-label text-color">
+                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+        <span class="clear"> <span class="font-extra-bold font-uppercase"> <strong class="font-bold">qwerty</strong>
+        </span>  </span> </a>
+                <div class="dropdown">
+                    <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                        <small class="text-muted"><b class="caret"></b></small>
+                    </a>
+                    <ul class="dropdown-menu animated flipInX m-t-xs">
+                         <li><a href="/rewardApis/users/edit/2">Profile</a></li>
+                         <li><a href="/rewardApis/users/logout">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <ul id="side-menu" class="nav">
+            <li class="active">
+                <a href="#"> <span class="nav-label">Dashboard</span></a>
+            </li>
+            <!-- <li>
+                <a href="analytics.html"> <span class="nav-label">Analytics</span><span class="label label-warning pull-right">NEW</span> </a>
+            </li> -->
+                        <li>
+                <a href="#"><span class="nav-label">Users</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level collapse" aria-expanded="false">
+                     <li><a href="/rewardApis/users">View All</a></li>
+                     <li><a href="/rewardApis/users/add">Add User</a></li>
+                </ul>
+            </li>
+                                    <li>
+                <a href="#"><span class="nav-label">Programs</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level collapse" aria-expanded="false">
+                     <li><a href="/rewardApis/reseller-programs">View All</a></li>
+                     <li><a href="/rewardApis/reseller-programs/add">Add Program</a></li>
+                </ul>
+            </li>
+                     </ul>
+    </div>
+</aside>
+
+
+<input type="hidden" value="http://localhost/rewardApis/" id="baseUrl" name="baseUrl" /><!-- Main Wrapper -->
+<div id="wrapper" style="min-height: 611px;">
+    <div class="transition animated fadeIn small-header">
+        <div class="hpanel">
+            <div class="panel-body">
+                <h2 class="font-light m-b-xs">
+                    <strong>Users</strong>
+                </h2>
+                <div id="hbreadcrumb">
+                    <ol style="margin-bottom: 0px;" class="hbreadcrumb breadcrumb">
+                        <li>
+                            <a href="javascript:void(0)">Home</a>
+                        </li>
+                        <li><a href="/rewardApis/Users">Users</a></li>
+
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+                <div class="row">
+    <div class="col-lg-12">
+        <div class="hpanel">
+            <div class="panel-heading">
+                Edit User            </div>
+            <div class="panel-body">
+                <form action="/rewardApis/users/edit/3" class="form-horizontal" data-toggle="validator" accept-charset="utf-8" method="post"><div style="display:none;"><input type="hidden" value="PUT" name="_method" /></div>                                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                                        <input type="hidden" value="2" id="reseller-id" name="reseller_id" />                                        </div>
+
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                    <label for="role-id" class="col-sm-2 control-label">Role</label>                        <div class="col-sm-10">
+                            <div class="input select"><select id="role-id" class="form-control m-b" name="role_id"><option selected="selected" value="2">staff_admin</option><option value="3">staff_manager</option></select></div>                        </div>
+                    </div>
+
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                    <label for="first-name" class="col-sm-2 control-label">First Name</label>                        <div class="col-sm-10">
+                            <div class="input text required"><input type="text" value="testuser" id="first-name" maxlength="255" required="required" class="form-control m-b" name="first_name" /></div>                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                    <label for="last-name" class="col-sm-2 control-label">Last Name</label>                        <div class="col-sm-10">
+                            <div class="input text required"><input type="text" value="testuser" id="last-name" maxlength="255" required="required" class="form-control m-b" name="last_name" /></div>                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <label for="username" class="col-sm-2 control-label">Username</label>                    <div class="col-sm-10">
+                        <div class="input text required"><input type="text" value="testuser" id="username" maxlength="255" required="required" class="form-control m-b" name="username" /></div>                    </div>
+                </div>
+                <div class="hr-line-dashed"></div>
+                <div class="form-group">
+                <label for="email" class="col-sm-2 control-label">Email</label>                    <div class="col-sm-10">
+                        <div class="input email required"><input type="email" value="testuser@gmail.co" id="email" maxlength="255" required="required" class="form-control m-b" name="email" /></div>                    </div>
+                </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                    <label for="phone" class="col-sm-2 control-label">Phone</label>                        <div class="col-sm-10">
+                            <div class="input tel required"><input type="tel" value="1234567890" id="phone" maxlength="255" required="required" class="form-control m-b" name="phone" /></div>                        </div>
+                    </div>
+                                        <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                    <label for="status" class="col-sm-2 control-label">Status</label>                        <div class="col-sm-3">
+                            <div class="input checkbox"><input type="hidden" value="0" name="status" /><input type="checkbox" checked="checked" id="status" class="form-control m-b" value="1" name="status" /></div>                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <div class="col-sm-8 col-sm-offset-2">
+                        <button type="submit" class="btn btn-primary" id="check_submit">Submit</button>                        <a class="btn btn-danger" id="check_cancel" href="http://localhost/rewardApis/users">Cancel</a>                        </div>
+                    </div>
+                </form>            </div>
+        </div>
+    </div>
+<!-- Model Window -->
+
+</div>
+<input type="hidden" value="3" name="userId" /><!-- /.modal -->
+    <footer class="footer">
+        <span class="pull-right">
+            Rewards Api
+        </span>
+        2017
+</footer></div>
+<script src="/rewardApis/debug_kit/js/toolbar.js" data-url="http://localhost/rewardApis/" data-id="884c2953-6ad0-40db-95d1-f8a6110e6263" id="__debug_kit"></script>
+<div id="changePasswordModal" role="dialog" tabindex="-1" class="modal fade">
+  <div role="document" class="modal-dialog">
+    <form action="/rewardApis/users/edit/3" data-toggle="validator" class="form-horizontal" accept-charset="utf-8" method="post"><div style="display:none;"><input type="hidden" value="POST" name="_method" /></div>    <div class="modal-content">
+      <div class="modal-header">
+        <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title">CHANGE_PASSWORD</h4>
+      </div>
+
+      <div class="modal-body">
+      <div style="" id="rsp_msg" class="alert">
+
+        </div>
+        <div class="form-group">
+          <label for="name" class="col-sm-4 control-label">Old Password</label>          <div class="col-sm-8">
+           <div class="input password required"><input type="password" placeholder="Enter Old Password" data-minlength="8" class="form-control" id="old_pwd" required="required" name="old_pwd" /></div>            <div class="help-block with-errors">PASSWORD_LENGTH</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="name" class="col-sm-4 control-label">New Password</label>          <div class="col-sm-8">
+           <div class="input password required"><input type="password" placeholder="Enter New Password" data-minlength="8" class="form-control" required="required" id="new_pwd" name="new_pwd" /></div>            <div class="help-block with-errors">PASSWORD_LENGTH</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="name" class="col-sm-4 control-label">Confirm New Password</label>          <div class="col-sm-8">
+           <div class="input password required"><input type="password" placeholder="Confirm Password" data-match-error="__('MISMATCH')" data-match="#new_pwd" data-minlength="8" class="form-control" required="required" id="cnf_new_pwd" name="cnf_new_pwd" /></div>            <div class="help-block with-errors">PASSWORD_LENGTH</div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="modal-footer text-center">
+        <button data-dismiss="modal" class="btn btn-danger" type="button">Close</button>
+        <button type="submit" id="saveUserPassword" class="btn btn-primary">Submit</button>      </div>
+          </div></form><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><iframe width="40" height="40" style="position: fixed; bottom: 0px; right: 0px; border: 0px none; outline: 0px none; overflow: hidden; z-index: 99999;" src="http://localhost/rewardApis/debug_kit/toolbar/884c2953-6ad0-40db-95d1-f8a6110e6263"></iframe></body><canvas id="fxdriver-screenshot-canvas" style="display: none;" width="1300" height="994"></canvas></html>

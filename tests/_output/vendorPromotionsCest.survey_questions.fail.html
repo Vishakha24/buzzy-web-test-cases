@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+
+    <meta charset="utf-8" />    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+
+    <title>
+        BuzzyDoc | Application:
+        SurveyQuestions    </title>
+    <link rel="icon" type="image/x-icon" href="/staging/img/favicon.ico" /><link rel="shortcut icon" type="image/x-icon" href="/staging/img/favicon.ico" />
+    <link href="/staging/css/bootstrap.min.css" rel="stylesheet" />    
+    <link href="/staging/css/plugins/toastr/toastr.min.css" rel="stylesheet" />    <link href="/staging/css/animate.css" rel="stylesheet" />    <link href="/staging/css/style.css" rel="stylesheet" />    
+	<link href="/staging/css/plugins/iCheck/custom.css" rel="stylesheet" />
+	<link href="/staging/css/plugins/steps/jquery.steps.css" rel="stylesheet" />
+
+    <link href="/staging/css/super-admin.css" rel="stylesheet" />        <link href="/staging/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet" />    
+	<link href="/staging/css/plugins/dataTables/datatables.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" />
+    <!-- Gritter -->
+    <script src="/staging/js/jquery-2.1.1.js"></script>
+    <link href="/staging/css/plugins/sweetalert/sweetalert.css" rel="stylesheet" />    <script src="/staging/js/plugins/sweetalert/sweetalert.min.js"></script>
+    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-cookies.js"></script>
+
+            </head>
+<body class=" pace-done"><div class="pace  pace-inactive"><div class="pace-progress" style="transform: translate3d(100%, 0px, 0px);" data-progress-text="100%" data-progress="99">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div>
+    <div id="wrapper">
+
+    
+
+
+    
+<nav role="navigation" class="navbar-default navbar-static-side">
+  <div class="sidebar-collapse">
+    <ul id="side-menu" class="nav metismenu">
+      <li class="nav-header">
+        <div class="dropdown profile-element"> <span>
+         <img alt="" src="/staging/img/user-small.png" />       </span>
+       <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+        <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">admin</strong>
+        </span> <span class="text-muted text-xs block">Admin <b class="caret"></b></span> </span> </a>
+                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                            <li><a href="/staging/users/edit/1">Profile</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/staging/users/logout">Logout</a></li>
+                        </ul>
+      </div>
+      <div class="logo-element">
+        Bz
+      </div>
+    </li>
+    <!--  <li>
+      <a href="/staging/users/dashboard"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></span></a>
+    </li> -->
+    <li class="">
+      <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">Vendors<span class="fa arrow"></span></span></a>
+      <ul class="nav nav-second-level collapse">
+        <li><a href="/staging/vendors">View All</a></li>
+        <li><a href="/staging/vendors/add">Add Vendor</a></li>
+      </ul>
+    </li>  
+    <li class="">
+      <a href="#"><i class="fa fa-cogs"></i> <span class="nav-label">Settings </span><span class="fa arrow"></span></a>
+      <ul class="nav nav-second-level collapse">
+        <li>
+            <a href="#">Users <span class="fa arrow"></span></a>
+            <ul class="nav nav-third-level collapse">
+              <li><a href="/staging/users">View All</a></li>
+              <li><a href="/staging/users/add">Add User</a></li>
+
+            </ul>
+        </li>
+        <li>
+          <a href="#">Rewards <span class="fa arrow"></span></a>
+          <ul class="nav nav-third-level collapse">
+              <li class="">
+                  <a href="#">In-House Rewards <span class="fa arrow"></span></a>
+                    <ul class="nav nav-fourth-level collapse">
+                      <li><a href="/staging/legacy-rewards">View All</a></li>
+                      <li><a href="/staging/legacy-rewards/add">Add Rewards</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                  <a href="#">Gift Coupons <span class="fa arrow"></span></a>
+                  <ul class="nav nav-fourth-level collapse">
+                    <li><a href="/staging/gift-coupons">View All</a></li>
+                    <li><a href="/staging/gift-coupons/add">Add Coupons</a></li>
+                  </ul>
+                </li>
+          </ul>
+        </li>
+        <li class="">
+          <a href="#">Promotions<span class="fa arrow"></span></a>
+          <ul class="nav nav-second-level collapse">
+            <li><a href="/staging/promotions">View All</a></li>
+            <li><a href="/staging/promotions/add">Add Promotions</a></li>
+          </ul>
+        </li>
+        <li class="">
+          <a href="#">Emails<span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level collapse">
+              <li><a href="/staging/email-settings">View All</a></li>
+              <li><a href="/staging/email-settings/add">Add Email</a></li>
+            </ul>
+        </li>
+        <li class="">
+          <a href="#">Questions<span class="fa arrow"></span></a>
+          <ul class="nav nav-second-level collapse">
+            <li><a href="/staging/questions">View All</a></li>
+            <li><a href="/staging/questions/add">Add Question</a></li>
+          </ul>
+        </li>
+        <li class="">
+          <a href="#">Surveys<span class="fa arrow"></span></a>
+          <ul class="nav nav-second-level collapse">
+            <li><a href="/staging/surveys">View All</a></li>
+            <li><a href="/staging/surveys/add">Add Survey</a></li>
+          </ul>
+        </li>
+        <li class="">
+          <a href="#">Survey Questions<span class="fa arrow"></span></a>
+          <ul class="nav nav-second-level collapse">
+            <li><a href="/staging/survey-questions">View All</a></li>
+            <li><a href="/staging/survey-questions/add">Add Survey Question</a></li>
+          </ul>
+        </li>
+        <li class="">
+            <a href="#">Tier Program <span class="fa arrow"></span></a>
+            <ul class="nav nav-third-level collapse">
+              <li><a href="/staging/tiers">Tiers</a></li>
+              <li><a href="/staging/tier-perks">Tier Perks</a></li>
+             </ul>
+        </li>
+        <li class="">
+          <a href="#">Referrals<span class="fa arrow"></span></a>
+          <ul class="nav nav-second-level collapse">
+            <li><a href="/staging/referral-templates">Referral Templates</a></li>
+            <li><a href="/staging/vendor-referral-settings">Vendor Referral Settings</a></li>
+          </ul>
+        </li>
+        <li class="">
+          <a href="#">Roles<span class="fa arrow"></span></a>
+          <ul class="nav nav-second-level collapse">
+            <li><a href="/staging/roles">View All</a></li>
+            <li><a href="/staging/roles/add">Add Roles</a></li>
+          </ul>
+        </li> 
+        <li class="">
+        <a href="#">Vendor Settings<span class="fa arrow"></span></a>
+          <ul class="nav nav-second-level collapse">
+              <li>
+                <a href="/staging/vendor-promotions">Vendor Promotions<span class="fa arrow"></span></a>
+              </li>
+              <li class="">
+                <a href="#">Vendor Locations <span class="fa arrow"></span></a>
+                <ul class="nav nav-third-level collapse">
+                  <li><a href="/staging/vendor-locations">View All</a></li>
+                  <li><a href="/staging/vendor-locations/add">Add Vendor Location</a></li>
+                </ul>
+              </li>
+              <li class="">
+                <a href="#">Vendor Email<span class="fa arrow"></span></a>
+                <ul class="nav nav-third-level collapse">
+                  <li><a href="/staging/vendor-email-settings">View All</a></li>
+                  <li><a href="/staging/vendor-email-settings/add">Add Vendor Email</a></li>
+                </ul>
+              </li>
+              <li class="">
+                <a href="#">Vendor Surveys<span class="fa arrow"></span></a>
+                <ul class="nav nav-third-level collapse">
+                  <li><a href="/staging/vendor-surveys">View All</a></li>
+                  <li><a href="/staging/vendor-surveys/add">Add Vendor Survey</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="/staging/vendor-survey-questions">Vendor Survey Questions<span class="fa arrow"></span></a>
+              </li>
+              <li class="">
+                <a href="#">Vendor Milestones<span class="fa arrow"></span></a>
+                <ul class="nav nav-third-level collapse">
+                  <li><a href="/staging/vendor-milestones">View All</a></li>
+
+                  <li><a href="/staging/vendor-milestones/add">Add Vendor Milestones</a></li>
+                </ul>
+              </li>
+          </ul>
+        </li>            
+    </ul>
+  </li>
+   <li class="">
+            <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">Templates<span class="fa arrow"></span></span></a>     
+            <ul class="nav nav-third-level collapse">
+              <li><a href="/staging/templates">View All</a></li>
+
+              <li><a href="/staging/templates/add">Add Template</a></li>
+            </ul>
+          </li>
+    <li class="">
+       <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Reports </span><span class="fa arrow"></span></a>
+      <ul class="nav nav-second-level collapse">
+          <li><a href="/staging/vendor-deposit-balances">Vendor Deposit Balance</a></li>
+          <li><a href="/staging/credit-card-charges">Credit Card Charge</a></li>
+          <li>
+            <a href="/staging/legacy-redemptions">Redemptions</a>          </li>
+          <li>
+            <a href="/staging/review-request-statuses">Vendor Reviews</a>          </li>
+          <li>
+              <a href="#">Referrals <span class="fa arrow"></span></a>
+              <ul class="nav nav-third-level collapse">
+                  <li><a href="/staging/referrals">Referred People</a></li> 
+                  <li><a href="/staging/referral-leads">Referral Leads</a></li>
+              </ul>
+          </li>
+          </ul>
+        </li>
+  </ul></div>
+</nav>
+
+
+        <div class="gray-bg" id="page-wrapper" style="min-height: 673px;">
+
+        <input type="hidden" value="http://buzzy.twinspark.co/staging/" id="baseUrl" name="baseUrl" />        <div class="row border-bottom">
+            <nav style="margin-bottom: 0" role="navigation" class="navbar navbar-static-top">
+        <div class="navbar-header">
+            <a href="#" class="navbar-minimalize minimalize-styl-2 btn btn-primary "><i class="fa fa-bars"></i> </a>
+            <!--<form role="search" class="navbar-form-custom" action="search_results.html">
+                <div class="form-group">
+                    <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+                </div>
+            </form> -->
+        </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li>
+                 <a class="fa fa-sign-out" href="/staging/users/logout">Logout</a>                </li>
+            </ul>
+
+</nav>
+        </div>
+        <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Survey Questions</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="javascript:void(0)">Home</a>
+            </li>
+            <li>
+                <a href="/staging/SurveyQuestions">Survey Questions</a>            </li>
+                    </ol>
+    </div>
+</div>            <div class="wrapper wrapper-content animated fadeIn">
+                                          
+                             <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>Questions</h5>
+                        <div class="text-right">
+                        <a class="btn btn-success" href="/staging/survey-questions/add">Add Survey Question</a>                        </div>
+                    </div>
+                    <div class="ibox-content">
+
+                        <div class="table-responsive">
+                        
+                    <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper form-inline dt-bootstrap"><div class="html5buttons"><div class="dt-buttons btn-group"><a class="btn btn-default buttons-copy buttons-html5" tabindex="0" aria-controls="DataTables_Table_0"><span>Copy</span></a><a class="btn btn-default buttons-csv buttons-html5" tabindex="0" aria-controls="DataTables_Table_0"><span>CSV</span></a><a class="btn btn-default buttons-excel buttons-html5" tabindex="0" aria-controls="DataTables_Table_0"><span>Excel</span></a><a class="btn btn-default buttons-pdf buttons-html5" tabindex="0" aria-controls="DataTables_Table_0"><span>PDF</span></a><a class="btn btn-default buttons-print" tabindex="0" aria-controls="DataTables_Table_0"><span>Print</span></a></div></div><div class="dataTables_length" id="DataTables_Table_0_length"><label>Show <select name="DataTables_Table_0_length" aria-controls="DataTables_Table_0" class="form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><div id="DataTables_Table_0_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="DataTables_Table_0" /></label></div><div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">Showing 1 to 7 of 7 entries</div><table width="100%" class="display responsive no-wrap table table-striped table-bordered table-hover dataTables dataTable dtr-inline" id="DataTables_Table_0" aria-describedby="DataTables_Table_0_info" role="grid" style="width: 100%;">
+                    <thead>
+                        <tr role="row"><th scope="col" class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 53px;" aria-sort="ascending" aria-label="S.No.: activate to sort column descending">S.No.</th><th scope="col" class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 232px;" aria-label="Survey Name: activate to sort column ascending">Survey Name</th><th scope="col" class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 414px;" aria-label="Questions: activate to sort column ascending">Questions</th><th class="actions sorting" scope="col" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 100px;" aria-label="Actions: activate to sort column ascending">Actions</th></tr>
+                    </thead>
+                    <tbody>
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                            <tr role="row" class="odd">
+                                <td class="sorting_1" tabindex="0">1</td>
+                                <td>Orthodontics Compliance Survey</td>
+                                <td>Was patient on-time for appointment?</td>
+                                <td class="actions">
+                                        <a class="btn btn-xs btn-success" href="/staging/survey-questions/view/1">                                    <i class="fa fa-eye fa-fw"></i>
+                                    </a>
+                                    <a "="" class="btn btn-xs btn-warning" href="/staging/survey-questions/edit/1">                                    <i class="fa fa-pencil fa-fw"></i>
+                                    </a>
+                                    <form action="/staging/survey-questions/delete/1" method="post" style="display:none;" name="post_586c91dcda2a1197600625"><input type="hidden" value="POST" name="_method" /></form><a onclick='if (confirm("Are you sure you want to delete # 1?")) { document.post_586c91dcda2a1197600625.submit(); } event.returnValue = false; return false;' class="btn btn-sm btn-danger fa fa-trash-o fa-fh" href="#"></a>                                </td>
+                            </tr><tr role="row" class="even">
+                                <td class="sorting_1" tabindex="0">2</td>
+                                <td>Orthodontics Compliance Survey</td>
+                                <td>Did the patient maintain good oral hygeine?</td>
+                                <td class="actions">
+                                        <a class="btn btn-xs btn-success" href="/staging/survey-questions/view/2">                                    <i class="fa fa-eye fa-fw"></i>
+                                    </a>
+                                    <a "="" class="btn btn-xs btn-warning" href="/staging/survey-questions/edit/2">                                    <i class="fa fa-pencil fa-fw"></i>
+                                    </a>
+                                    <form action="/staging/survey-questions/delete/2" method="post" style="display:none;" name="post_586c91dcda9be481141009"><input type="hidden" value="POST" name="_method" /></form><a onclick='if (confirm("Are you sure you want to delete # 2?")) { document.post_586c91dcda9be481141009.submit(); } event.returnValue = false; return false;' class="btn btn-sm btn-danger fa fa-trash-o fa-fh" href="#"></a>                                </td>
+                            </tr><tr role="row" class="odd">
+                                <td class="sorting_1" tabindex="0">3</td>
+                                <td>Orthodontics Compliance Survey</td>
+                                <td>The patient did not have any broken-brackets.</td>
+                                <td class="actions">
+                                        <a class="btn btn-xs btn-success" href="/staging/survey-questions/view/3">                                    <i class="fa fa-eye fa-fw"></i>
+                                    </a>
+                                    <a "="" class="btn btn-xs btn-warning" href="/staging/survey-questions/edit/3">                                    <i class="fa fa-pencil fa-fw"></i>
+                                    </a>
+                                    <form action="/staging/survey-questions/delete/3" method="post" style="display:none;" name="post_586c91dcdac55590242214"><input type="hidden" value="POST" name="_method" /></form><a onclick='if (confirm("Are you sure you want to delete # 3?")) { document.post_586c91dcdac55590242214.submit(); } event.returnValue = false; return false;' class="btn btn-sm btn-danger fa fa-trash-o fa-fh" href="#"></a>                                </td>
+                            </tr><tr role="row" class="even">
+                                <td class="sorting_1" tabindex="0">4</td>
+                                <td>Orthodontics Compliance Survey</td>
+                                <td>Was the patient wearing their elastics/appliances?</td>
+                                <td class="actions">
+                                        <a class="btn btn-xs btn-success" href="/staging/survey-questions/view/4">                                    <i class="fa fa-eye fa-fw"></i>
+                                    </a>
+                                    <a "="" class="btn btn-xs btn-warning" href="/staging/survey-questions/edit/4">                                    <i class="fa fa-pencil fa-fw"></i>
+                                    </a>
+                                    <form action="/staging/survey-questions/delete/4" method="post" style="display:none;" name="post_586c91dcdaf1a727907178"><input type="hidden" value="POST" name="_method" /></form><a onclick='if (confirm("Are you sure you want to delete # 4?")) { document.post_586c91dcdaf1a727907178.submit(); } event.returnValue = false; return false;' class="btn btn-sm btn-danger fa fa-trash-o fa-fh" href="#"></a>                                </td>
+                            </tr><tr role="row" class="odd">
+                                <td class="sorting_1" tabindex="0">5</td>
+                                <td>Orthodontics Compliance Survey</td>
+                                <td>Did the patient come in for their routine dental check-up?</td>
+                                <td class="actions">
+                                        <a class="btn btn-xs btn-success" href="/staging/survey-questions/view/5">                                    <i class="fa fa-eye fa-fw"></i>
+                                    </a>
+                                    <a "="" class="btn btn-xs btn-warning" href="/staging/survey-questions/edit/5">                                    <i class="fa fa-pencil fa-fw"></i>
+                                    </a>
+                                    <form action="/staging/survey-questions/delete/5" method="post" style="display:none;" name="post_586c91dcdb177099779932"><input type="hidden" value="POST" name="_method" /></form><a onclick='if (confirm("Are you sure you want to delete # 5?")) { document.post_586c91dcdb177099779932.submit(); } event.returnValue = false; return false;' class="btn btn-sm btn-danger fa fa-trash-o fa-fh" href="#"></a>                                </td>
+                            </tr><tr role="row" class="even">
+                                <td class="sorting_1" tabindex="0">7</td>
+                                <td>Orthodontics Compliance Survey</td>
+                                <td>Test question edited</td>
+                                <td class="actions">
+                                        <a class="btn btn-xs btn-success" href="/staging/survey-questions/view/7">                                    <i class="fa fa-eye fa-fw"></i>
+                                    </a>
+                                    <a "="" class="btn btn-xs btn-warning" href="/staging/survey-questions/edit/7">                                    <i class="fa fa-pencil fa-fw"></i>
+                                    </a>
+                                    <form action="/staging/survey-questions/delete/7" method="post" style="display:none;" name="post_586c91dcdb3f0616464786"><input type="hidden" value="POST" name="_method" /></form><a onclick='if (confirm("Are you sure you want to delete # 7?")) { document.post_586c91dcdb3f0616464786.submit(); } event.returnValue = false; return false;' class="btn btn-sm btn-danger fa fa-trash-o fa-fh" href="#"></a>                                </td>
+                            </tr><tr role="row" class="odd">
+                                <td class="sorting_1" tabindex="0">9</td>
+                                <td>Survey  One</td>
+                                <td>Test question edited</td>
+                                <td class="actions">
+                                        <a class="btn btn-xs btn-success" href="/staging/survey-questions/view/9">                                    <i class="fa fa-eye fa-fw"></i>
+                                    </a>
+                                    <a "="" class="btn btn-xs btn-warning" href="/staging/survey-questions/edit/9">                                    <i class="fa fa-pencil fa-fw"></i>
+                                    </a>
+                                    <form action="/staging/survey-questions/delete/9" method="post" style="display:none;" name="post_586c91dcdb643433177914"><input type="hidden" value="POST" name="_method" /></form><a onclick='if (confirm("Are you sure you want to delete # 9?")) { document.post_586c91dcdb643433177914.submit(); } event.returnValue = false; return false;' class="btn btn-sm btn-danger fa fa-trash-o fa-fh" href="#"></a>                                </td>
+                            </tr></tbody>
+                    <tfoot>
+                    <tr><th scope="col" rowspan="1" colspan="1"><select><option value=""></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="7">7</option><option value="9">9</option></select></th><th scope="col" rowspan="1" colspan="1"><select><option value=""></option><option value="Orthodontics Compliance Survey">Orthodontics Compliance Survey</option><option value="Survey  One">Survey  One</option></select></th><th scope="col" rowspan="1" colspan="1"><select><option value=""></option><option value="Did the patient come in for their routine dental check-up?">Did the patient come in for their routine dental check-up?</option><option value="Did the patient maintain good oral hygeine?">Did the patient maintain good oral hygeine?</option><option value="Test question edited">Test question edited</option><option value="The patient did not have any broken-brackets.">The patient did not have any broken-brackets.</option><option value="Was patient on-time for appointment?">Was patient on-time for appointment?</option><option value="Was the patient wearing their elastics/appliances?">Was the patient wearing their elastics/appliances?</option></select></th></tr>
+                    </tfoot>
+                    </table><div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="DataTables_Table_0_previous"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button active"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button next disabled" id="DataTables_Table_0_next"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0">Next</a></li></ul></div></div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            </div>
+<!-- Page-Level Scripts -->
+<script>
+    $(document).ready(function(){
+        $('.dataTables').DataTable({
+            initComplete: function () {
+                this.api().columns().every( function () {
+                    var column = this;
+                    var select = $('&lt;select&gt;&lt;option value=""&gt;&lt;/option&gt;&lt;id = "init"&gt;&lt;id/&gt;&lt;/select&gt;')
+                        .appendTo( $(column.footer()).empty() )
+                        .on( 'change', function () {
+                            var val = $.fn.dataTable.util.escapeRegex(
+                                $(this).val()
+                            );
+     
+                            column
+                                .search( val ? '^'+val+'$' : '', true, false )
+                                .draw();
+                        } );
+     
+                    column.data().unique().sort().each( function ( d, j ) {
+                        select.append( '&lt;option value="'+d+'"&gt;'+d+'&lt;/option&gt;' )
+                    } );
+                } );
+            },
+
+            dom: '&lt;"html5buttons"B&gt;lTfgitp',
+            buttons: [
+                { extend: 'copy'},
+                {extend: 'csv'},
+                {extend: 'excel', title: 'Survey Questions'},
+                {extend: 'pdf', title: 'Survey Questions'},
+
+                {extend: 'print',
+                 customize: function (win){
+                        $(win.document.body).addClass('white-bg');
+                        $(win.document.body).css('font-size', '10px');
+
+                        $(win.document.body).find('table')
+                                .addClass('compact')
+                                .css('font-size', 'inherit');
+                  }
+                }
+            ],
+
+        });
+
+    });
+</script>
+                </div>
+        <div class="footer">
+            <div>
+                <strong>Copyright</strong> BuzzyDoc © 2017            </div>
+        </div>
+
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <!-- Metis Menu-->
+
+    <script src="/staging/js/bootstrap.min.js"></script>    <script src="/staging/js/super_admin.js"></script>    <script src="/staging/js/jquery.cookie.js"></script>    <script src="/staging/js/review_settings.js"></script>    
+	<script src="/staging/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+	<script src="/staging/js/plugins/pace/pace.min.js"></script>
+	<script src="/staging/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="/staging/js/plugins/toastr/toastr.min.js"></script>
+	<script src="/staging/js/plugins/validator/validator.js"></script>
+	<script src="/staging/js/plugins/staps/jquery.steps.min.js"></script>
+    
+    <!--Dashboard app scripts -->
+    <script src="/staging/js/plugins/dataTables/angular-datatables/jquery.dataTables.min.js"></script>    
+	<script src="/staging/dashboardApp/js/app.js"></script>
+	<script src="/staging/dashboardApp/js/directive.js"></script>
+	<script src="/staging/dashboardApp/js/interceptor.js"></script>
+	<script src="/staging/js/plugins/dataTables/datatables.min.js"></script>
+    <script src="/staging/js/plugins/dataTables/angular-datatables/angular-datatables.directive.js"></script>    <script src="/staging/js/plugins/dataTables/angular-datatables/angular-datatables.instances.js"></script>    <script src="/staging/js/plugins/dataTables/angular-datatables/angular-datatables.util.js"></script>    <script src="/staging/js/plugins/dataTables/angular-datatables/angular-datatables.renderer.js"></script>    <script src="/staging/js/plugins/dataTables/angular-datatables/angular-datatables.factory.js"></script>    <script src="/staging/js/plugins/dataTables/angular-datatables/angular-datatables.options.js"></script>    <script src="/staging/js/plugins/dataTables/angular-datatables/angular-datatables.js"></script>    <!--Dashboard app contollers -->
+    
+	<script src="/staging/dashboardApp/js/controller/menu.js"></script>
+	<script src="/staging/dashboardApp/js/controller/patient.js"></script>
+	<script src="/staging/dashboardApp/js/controller/profile.js"></script>
+	<script src="/staging/dashboardApp/js/controller/redemption.js"></script>
+	<script src="/staging/dashboardApp/js/controller/review.js"></script>
+	<script src="/staging/dashboardApp/js/controller/search.js"></script>
+	<script src="/staging/dashboardApp/js/controller/survey.js"></script>
+	<script src="/staging/dashboardApp/js/controller/tier.js"></script>
+	<script src="/staging/dashboardApp/js/controller/patient_history.js"></script>
+	<script src="/staging/dashboardApp/js/controller/manual.js"></script>
+
+    <!-- Dashboard app factories-->
+    
+	<script src="/staging/dashboardApp/js/factory/patient.js"></script>
+	<script src="/staging/dashboardApp/js/factory/reward_products.js"></script>
+	<script src="/staging/dashboardApp/js/factory/search_results.js"></script>
+	<script src="/staging/dashboardApp/js/factory/vendor.js"></script>
+	<script src="/staging/dashboardApp/js/factory/plan.js"></script>
+	<script src="/staging/dashboardApp/js/factory/gift_coupons.js"></script>
+	<script src="/staging/dashboardApp/js/factory/settings.js"></script>
+	<script src="/staging/dashboardApp/js/factory/isAuthorized.js"></script>
+
+    <script>
+//&lt;![CDATA[
+$(function () {
+  $('#side-menu').metisMenu();
+});
+//]]&gt;
+</script>
+    <script src="/staging/js/inspinia.js"></script>
+       <script>
+           $(function () {
+            $('#side-menu').metisMenu();
+          });
+       </script>
+
+
+</div><div style="display:none;margin-top:22%;" class="loading modal">
+	<div class="sk-spinner sk-spinner-wave modal-dialog">
+		<div class="sk-rect1"></div>
+		<div class="sk-rect2"></div>
+		<div class="sk-rect3"></div>
+		<div class="sk-rect4"></div>
+		<div class="sk-rect5"></div>
+	</div>
+</div></body><canvas id="fxdriver-screenshot-canvas" style="display: none;" width="1285" height="952"></canvas></html>

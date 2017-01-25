@@ -1,0 +1,10 @@
+class_name: ApiRewardsTester
+modules:
+    enabled: [ REST,Asserts,PhpBrowser]
+    config:
+                # PhpBrowser:
+                #         url: http://peoplehub.twinspark.co/peoplehub/
+                REST:
+                    depends: PhpBrowser
+                    # url: http://buzzy.twinspark.co/buzzyadmin/
+                    url: http://rewardapis.twinspark.co/dev/

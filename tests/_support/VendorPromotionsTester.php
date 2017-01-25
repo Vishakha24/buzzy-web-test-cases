@@ -54,8 +54,16 @@ class VendorPromotionsTester extends \Codeception\Actor
         $I->wait(3);
         $I->click('Settings');
         $I->wait(4);
-        $I->click('Vendor Promotions'); //Promotions
-        $I->wait(4);
+         if($admin == 1)
+        {
+            $I->click('Vendor Settings');
+            $I->wait(5);
+            $I->click('Vendor Promotions');
+            $I->wait(5);
+        }else{
+            $I->click('Vendor Promotions');
+            $I->wait(5);
+        }
         $I->click(Locator::find('a', ['class' => 'btn btn-success'])); 
         // $I->waitForElementVisible('#name', 4);
         $I->wait(4);
@@ -96,8 +104,16 @@ class VendorPromotionsTester extends \Codeception\Actor
         $I->wait(3);
         $I->click('Settings');
         $I->wait(4);	   
- 		$I->click('Vendor Promotions'); //Vendor Promotions
-        $I->wait(3);
+ 		 if($admin == 1)
+        {
+            $I->click('Vendor Settings');
+            $I->wait(5);
+            $I->click('Vendor Promotions');
+            $I->wait(5);
+        }else{
+            $I->click('Vendor Promotions');
+            $I->wait(5);
+        }
         $I->selectOption("select[name = DataTables_Table_0_length]", $option);
         $I->wait(4);
 		$I->click(Locator::lastElement(Locator::find('a', ['class' => 'btn btn-xs btn-warning edit'])));
@@ -130,8 +146,16 @@ class VendorPromotionsTester extends \Codeception\Actor
         $I->wait(3);
         $I->click('Settings');
         $I->wait(4);	   
- 		$I->click('Vendor Promotions'); //Vendor Promotions
-        $I->wait(4);
+ 		 if($admin == 1)
+        {
+            $I->click('Vendor Settings');
+            $I->wait(5);
+            $I->click('Vendor Promotions');
+            $I->wait(5);
+        }else{
+            $I->click('Vendor Promotions');
+            $I->wait(5);
+        }
         $I->checkOption("/descendant::input[@type='checkbox'][2]");
         $I->wait(4);
         $I->seeCheckboxIsChecked("/descendant::input[@type='checkbox'][2]");
@@ -168,8 +192,16 @@ class VendorPromotionsTester extends \Codeception\Actor
 		$I->wait(3);
         $I->click('Settings');
         $I->wait(3);
-		$I->click('Vendor Promotions');
-		$I->wait(4);
+        if($admin == 1)
+        {
+            $I->click('Vendor Settings');
+            $I->wait(5);
+            $I->click('Vendor Promotions');
+            $I->wait(5);
+        }else{
+            $I->click('Vendor Promotions');
+            $I->wait(5);
+        }
 		$I->click('Add Promotions');
 		$I->wait(2);
 		$I->click('Submit');
@@ -215,9 +247,16 @@ class VendorPromotionsTester extends \Codeception\Actor
         $I->amGoingTo('Edit Vendor Promotions');
         $I->wait(3);
         $I->click('Settings');
-        $I->wait(4);
-        $I->click('Vendor Promotions');
-        $I->wait(3);
+        if($admin == 1)
+        {
+            $I->click('Vendor Settings');
+            $I->wait(5);
+            $I->click('Vendor Promotions');
+            $I->wait(5);
+        }else{
+            $I->click('Vendor Promotions');
+            $I->wait(5);
+        }
         $I->selectOption("select[name = DataTables_Table_0_length]", $option);
         $I->wait(3);
         $I->click(Locator::lastElement(Locator::find('a', ['class' => 'btn btn-xs btn-warning edit'])));
@@ -845,22 +884,247 @@ class VendorPromotionsTester extends \Codeception\Actor
         $I->click('#btnContinue');
         $I->wait(5);
     }
-    public function positive_case_for_templates($name, $plan, $industry)
+    
+    public function vendor_deposit_balance($vendor_name)
     {
         $I = $this;
-        $I->amGoingTo('Add new Template');
-        $I->click('Templates');
+        $I->amGoingTo('Search Vendor Deposit Balance of respective vendor');
+        $I->wait(3);
+        $I->click('Reports');
+        $I->wait(4);
+        $I->click('Vendor Deposit Balance');
         $I->wait(5);
-        $I->click('Add Template');
+        $I->seeInCurrentUrl('/vendor-deposit-balances');
+        $I->fillField(Locator::find('input', ['type' => 'search']), $vendor_name);
         $I->wait(5);
-        $I->fillField('#name', $name);
-        $I->wait(5);
-        $I->selectOption('select[name=plan_id]', $plan);
-        $I->wait(5);
-        $I->selectOption('select[id=industry_input]', $industry);
-        $I->wait(5);
-        $I->click('#tempName');
+        $I->see($vendor_name);
         $I->wait(5);
     }
 
+    public function credit_card_charge($vendor_name)
+    {
+        $I = $this;
+        $I->amGoingTo('Search Credit Cards of respective vendor');
+        $I->wait(3);
+        $I->click('Reports');
+        $I->wait(4);
+        $I->click('Credit Card Charge');
+        $I->wait(5);
+        $I->seeInCurrentUrl('/credit-card-charges');
+        $I->fillField(Locator::find('input', ['type' => 'search']), $vendor_name);
+        $I->wait(5);
+        $I->see($vendor_name);
+        $I->wait(5);
+    }
+
+    public function vendor_survey_questions($admin,$option, $points, $id, $edit_points)
+    {
+        $I = $this;
+        $I->amGoingTo('do vendor survey questions');
+        $I->click('Settings');
+        $I->wait(5);
+        if($admin == 1)
+        {
+            $I->click('Vendor Settings');
+            $I->wait(5);
+            $I->click('Vendor Survey Questions');
+            $I->wait(5);
+        }else{
+            $I->click('Vendor Survey Questions');
+            $I->wait(5);
+        }
+
+         $I->selectOption("select[name = DataTables_Table_0_length]", $option);
+         $I->wait(5);
+         $I->click(Locator::lastElement(Locator::find('a', ['class' => 'btn btn-xs btn-warning'])));
+         $I->BuzzyDoc_validations('check required validation for points', '#input-points', 'required', 'true', 'verified validation for points');
+         $I->BuzzyDoc_validations('check minimum value validation for points', '#input-points', 'min', '1', 'verified validation for points');
+         $I->fillField('#input-points', $points);
+         $I->wait(5);
+         $I->click('Submit');
+         $I->wait(5);
+         $I->seeInCurrentUrl('/vendor-survey-questions');
+         $I->BuzzyDoc_validations('check required validation for points', Locator::find('input', ['id' => $id]), 'required', 'true', 'verified validation for points');
+         $I->BuzzyDoc_validations('check minimum value validation for points', Locator::find('input', ['id' => $id]), 'min', '0', 'verified validation for points');
+         $I->fillField(Locator::find('input', ['id' => $id]), $edit_points);
+         $I->pressKey(Locator::find('input', ['id' => $id]),WebDriverKeys::ENTER);
+         $I->wait(5);
+         $I->seeInField(Locator::find('input', ['id' => $id]), $edit_points);
+    }
+
+    public function edit_selected_vendor_promotions($vendor, $option, $points)
+    {
+        $I = $this;
+        $I->amGoingTo('see vendor promotions of respective vendor and edit it');
+        $I->click('Settings');
+        $I->wait(5);
+        // if($admin == 1)
+        // {
+            $I->click('Vendor Settings');
+            $I->wait(5);
+            $I->click('Vendor Promotions');
+            $I->wait(5);
+        $I->seeInCurrentUrl('/vendor-promotions');
+        $I->wait(5);
+        $I->selectOption('#vendor-id', $vendor);
+        $I->wait(5);
+        $I->click('Submit');
+        $I->wait(5);
+        $I->selectOption("select[name = DataTables_Table_0_length]", $option);
+        $I->wait(5);
+        $I->checkOption("/descendant::input[@type='checkbox'][1]");
+        $I->wait(4);
+        $I->seeCheckboxIsChecked("/descendant::input[@type='checkbox'][1]");
+        $I->wait(4);
+        $I->click(Locator::elementAt(Locator::find('a', ['class' => 'btn btn-xs btn-warning edit']),1));
+        $I->wait(4);
+        $I->fillField("#points", $points);
+        $I->wait(4);
+        $I->click('Submit');
+        $I->wait(5);
+        $I->see('Vendor Promotions');
+        $I->seeInCurrentUrl('/vendor-promotions');
+        $I->wait(5);
+        $I->selectOption('#vendor-id', $vendor);
+        $I->wait(5);
+        $I->click('Submit');
+        $I->wait(5);
+        $I->seeInCurrentUrl('/vendor-promotions');
+        $I->see($points);
+        $I->wait(2);
+        $I->uncheckOption("/descendant::input[@type='checkbox'][1]");
+        $I->wait(4);
+        $I->dontSeeCheckboxIsChecked("/descendant::input[@type='checkbox'][1]");
+        $I->wait(4);
+   
+    }
+
+    public function survey_questions($survey_id, $question_id, $option)
+    {
+        $I = $this; 
+        $I->amGoingTo('add survey questions');
+        $I->wait(5);
+        $I->click('Settings');
+        $I->wait(5);
+        $I->click('Survey Questions');
+        $I->wait(5);
+        $I->click('Add Survey Question');
+        $I->wait(5);
+        $I->selectOption(Locator::find('select', ['name' => 'survey_id']), $survey_id);
+        $I->wait(5);
+        $I->selectOption('#question-id', $question_id);
+        $I->wait(5);
+        $I->click('Submit');
+        $I->wait(5);
+        $I->selectOption("select[name = DataTables_Table_0_length]", $option);
+    
+        //View Method
+         $I->wait(4);
+         $I->click(Locator::lastElement(Locator::find('a', ['class' => 'btn btn-xs btn-success'])));
+         $I->wait(5);
+         $I->see($survey_id);
+         $I->see($question_id);
+         $I->wait(3);
+         $I->click('Back');
+       
+    }
+
+    public function edit_survey_questions($survey_id, $option)
+    {
+        $I = $this; 
+        $I->amGoingTo('edit survey questions');
+        $I->wait(5);
+        $I->click('Settings');
+        $I->wait(5);
+        $I->click('Survey Questions');
+        $I->wait(5);
+        $I->click(Locator::find('a', ['href' => '/staging/survey-questions']));
+        $I->wait(5);
+        $I->selectOption("select[name = DataTables_Table_0_length]", $option);
+        $I->wait(5);
+        $I->click(Locator::lastElement(Locator::find('a', ['class' => 'btn btn-xs btn-warning'])));
+        $I->selectOption(Locator::find('select', ['name' => 'survey_id']), $survey_id);
+        $I->wait(5);
+        $I->click('Submit');
+        $I->wait(5);
+    
+        //Delete Method
+        $I->wait(2);
+        $I->selectOption("select[name = DataTables_Table_0_length]", $option);
+        $I->wait(5);   
+        $I->click(Locator::lastElement(Locator::find('a', ['class' => 'btn btn-sm btn-danger fa fa-trash-o fa-fh'])));//click on Delete button in Vendor Promotions
+        $I->wait(3); 
+        $I->seeInPopup('Are you sure you want to delete');
+        $I->wait(3);
+        $I->acceptPopup();
+        $I->wait(3);
+       
+    }
+
+
+    public function negative_case_for_add_view_survey_questions($survey_id, $question_id, $option)
+    {
+        $I = $this; 
+        $I->amGoingTo('add survey questions');
+        $I->wait(5);
+        $I->click('Settings');
+        $I->wait(5);
+        $I->click('Survey Questions');
+        $I->wait(5);
+        $I->click('Add Survey Question');
+        $I->wait(5);
+        $I->BuzzyDoc_validations('check required validation for survey name', Locator::find('select', ['name' => 'survey_id']) , 'required', 'true', 'verified validation for survey name');
+        $I->selectOption(Locator::find('select', ['name' => 'survey_id']), $survey_id);
+        $I->wait(5);
+        $I->BuzzyDoc_validations('check required validation for question name', '#question-id', 'required', 'true', 'verified validation for question');
+        $I->selectOption('#question-id', $question_id);
+        $I->wait(5);
+        $I->click('Submit');
+        $I->wait(5);
+        $I->selectOption("select[name = DataTables_Table_0_length]", $option);
+    
+        //View Method
+         $I->wait(4);
+         $I->click(Locator::lastElement(Locator::find('a', ['class' => 'btn btn-xs btn-success'])));
+         $I->wait(5);
+         $I->see($survey_id);
+         $I->see($question_id);
+         $I->wait(3);
+         $I->click('Back');
+    }
+
+    public function negative_case_for_edit_delete_survey_questions($survey_id, $option)
+    {
+        $I = $this; 
+        $I->amGoingTo('edit survey questions');
+        $I->wait(5);
+        $I->click('Settings');
+        $I->wait(5);
+        $I->click('Survey Questions');
+        $I->wait(5);
+        $I->click(Locator::find('a', ['href' => '/staging/survey-questions']));
+        $I->wait(5);
+        $I->selectOption("select[name = DataTables_Table_0_length]", $option);
+        $I->wait(5);
+        $I->click(Locator::lastElement(Locator::find('a', ['class' => 'btn btn-xs btn-warning'])));
+        $I->BuzzyDoc_validations('check required validation for survey name', Locator::find('select', ['name' => 'survey_id']) , 'required', 'true', 'verified validation for survey name');
+        $I->selectOption(Locator::find('select', ['name' => 'survey_id']), $survey_id);
+        $I->wait(5);
+        $I->click('Submit');
+        $I->wait(5);
+    
+        //Delete Method
+        $I->wait(2);
+        $I->selectOption("select[name = DataTables_Table_0_length]", $option);
+        $I->wait(5);   
+        $I->click(Locator::lastElement(Locator::find('a', ['class' => 'btn btn-sm btn-danger fa fa-trash-o fa-fh'])));//click on Delete button in Vendor Promotions
+        $I->wait(3); 
+        $I->seeInPopup('Are you sure you want to delete');
+        $I->wait(3);
+        $I->cancelPopup();
+        $I->wait(3);
+       
+    }
+
 }
+        
