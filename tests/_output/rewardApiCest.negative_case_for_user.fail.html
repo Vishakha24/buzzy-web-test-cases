@@ -10,7 +10,6 @@
             <style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
 <body>
 
-
 <!-- Header -->
 <div id="header">
     <div class="color-line">
@@ -45,7 +44,7 @@
             <ul class="nav navbar-nav no-borders">
                 
                 <li class="dropdown">
-                        <a class="fa fa-sign-out" href="/rewardApis/users/logout"></a>      
+                        <a class="fa fa-sign-out" href="/rewardApis/staffs/logout"></a>      
                 </li>
             </ul>
         </div>
@@ -60,14 +59,14 @@
 
             <div class="stats-label text-color">
                 <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
-        <span class="clear"> <span class="font-extra-bold font-uppercase"> <strong class="font-bold">qwerty</strong>
+        <span class="clear"> <span class="font-extra-bold font-uppercase"> <strong class="font-bold">user</strong>
         </span>  </span> </a>
                 <div class="dropdown">
                     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
                         <small class="text-muted"><b class="caret"></b></small>
                     </a>
                     <ul class="dropdown-menu animated flipInX m-t-xs">
-                         <li><a href="/rewardApis/users/edit/2">Profile</a></li>
+                         <li><a href="/rewardApis/users/edit/4">Profile</a></li>
                          <li><a href="/rewardApis/users/logout">Logout</a></li>
                     </ul>
                 </div>
@@ -93,14 +92,14 @@
                      <li><a href="/rewardApis/users/add">Add User</a></li>
                 </ul>
             </li>
-                                    <li>
+                        <li>
                 <a href="#"><span class="nav-label">Programs</span><span class="fa arrow"></span> </a>
                 <ul class="nav nav-second-level collapse" aria-expanded="false">
                      <li><a href="/rewardApis/reseller-programs">View All</a></li>
-                     <li><a href="/rewardApis/reseller-programs/add">Add Program</a></li>
-                </ul>
+                                 <li><a href="/rewardApis/reseller-programs/add">Add Program</a></li>
+                             </ul>
             </li>
-                     </ul>
+        </ul>
     </div>
 </aside>
 
@@ -125,107 +124,32 @@
             </div>
         </div>
     </div>
-                <div class="row">
-    <div class="col-lg-12">
-        <div class="hpanel">
-            <div class="panel-heading">
-                Edit User            </div>
-            <div class="panel-body">
-                <form action="/rewardApis/users/edit/3" class="form-horizontal" data-toggle="validator" accept-charset="utf-8" method="post"><div style="display:none;"><input type="hidden" value="PUT" name="_method" /></div>                                    <div class="hr-line-dashed"></div>
-                    <div class="form-group">
-                                        <input type="hidden" value="2" id="reseller-id" name="reseller_id" />                                        </div>
-
-                    <div class="hr-line-dashed"></div>
-                    <div class="form-group">
-                    <label for="role-id" class="col-sm-2 control-label">Role</label>                        <div class="col-sm-10">
-                            <div class="input select"><select id="role-id" class="form-control m-b" name="role_id"><option selected="selected" value="2">staff_admin</option><option value="3">staff_manager</option></select></div>                        </div>
-                    </div>
-
-                    <div class="hr-line-dashed"></div>
-                    <div class="form-group">
-                    <label for="first-name" class="col-sm-2 control-label">First Name</label>                        <div class="col-sm-10">
-                            <div class="input text required"><input type="text" value="testuser" id="first-name" maxlength="255" required="required" class="form-control m-b" name="first_name" /></div>                        </div>
-                    </div>
-                    <div class="hr-line-dashed"></div>
-                    <div class="form-group">
-                    <label for="last-name" class="col-sm-2 control-label">Last Name</label>                        <div class="col-sm-10">
-                            <div class="input text required"><input type="text" value="testuser" id="last-name" maxlength="255" required="required" class="form-control m-b" name="last_name" /></div>                        </div>
-                    </div>
-                    <div class="hr-line-dashed"></div>
-                    <div class="form-group">
-                        <label for="username" class="col-sm-2 control-label">Username</label>                    <div class="col-sm-10">
-                        <div class="input text required"><input type="text" value="testuser" id="username" maxlength="255" required="required" class="form-control m-b" name="username" /></div>                    </div>
-                </div>
-                <div class="hr-line-dashed"></div>
-                <div class="form-group">
-                <label for="email" class="col-sm-2 control-label">Email</label>                    <div class="col-sm-10">
-                        <div class="input email required"><input type="email" value="testuser@gmail.co" id="email" maxlength="255" required="required" class="form-control m-b" name="email" /></div>                    </div>
-                </div>
-                    <div class="hr-line-dashed"></div>
-                    <div class="form-group">
-                    <label for="phone" class="col-sm-2 control-label">Phone</label>                        <div class="col-sm-10">
-                            <div class="input tel required"><input type="tel" value="1234567890" id="phone" maxlength="255" required="required" class="form-control m-b" name="phone" /></div>                        </div>
-                    </div>
-                                        <div class="hr-line-dashed"></div>
-                    <div class="form-group">
-                    <label for="status" class="col-sm-2 control-label">Status</label>                        <div class="col-sm-3">
-                            <div class="input checkbox"><input type="hidden" value="0" name="status" /><input type="checkbox" checked="checked" id="status" class="form-control m-b" value="1" name="status" /></div>                        </div>
-                    </div>
-                    <div class="hr-line-dashed"></div>
-                    <div class="form-group">
-                        <div class="col-sm-8 col-sm-offset-2">
-                        <button type="submit" class="btn btn-primary" id="check_submit">Submit</button>                        <a class="btn btn-danger" id="check_cancel" href="http://localhost/rewardApis/users">Cancel</a>                        </div>
-                    </div>
-                </form>            </div>
-        </div>
-    </div>
-<!-- Model Window -->
-
-</div>
-<input type="hidden" value="3" name="userId" /><!-- /.modal -->
+                <nav id="actions-sidebar" class="large-3 medium-4 columns">
+    <ul class="side-nav">
+        <li class="heading">Actions</li>
+        <li><a href="/rewardApis/users">List Users</a></li>
+        <li><a href="/rewardApis/reseller-programs">List Reseller Programs</a></li>
+        <li><a href="/rewardApis/reseller-programs/add">New Reseller Program</a></li>
+        <li><a href="/rewardApis/manual-awards">List Manual Awards</a></li>
+        <li><a href="/rewardApis/manual-awards/add">New Manual Award</a></li>
+        <li><a href="/rewardApis/promotion-awards">List Promotion Awards</a></li>
+        <li><a href="/rewardApis/promotion-awards/add">New Promotion Award</a></li>
+        <li><a href="/rewardApis/tier-awards">List Tier Awards</a></li>
+        <li><a href="/rewardApis/tier-awards/add">New Tier Award</a></li>
+        <li><a href="/rewardApis/user-tiers">List User Tiers</a></li>
+        <li><a href="/rewardApis/user-tiers/add">New User Tier</a></li>
+    </ul>
+</nav>
+<div class="users form large-9 medium-8 columns content">
+    <form action="/rewardApis/users/add" accept-charset="utf-8" method="post"><div style="display:none;"><input type="hidden" value="POST" name="_method" /></div>    <fieldset>
+        <legend>Add User</legend>
+        <div class="input text required"><label for="name">Name</label><input type="text" id="name" maxlength="255" required="required" name="name" /></div><div class="input email required"><label for="email">Email</label><input type="email" id="email" maxlength="255" required="required" name="email" /></div><div class="input tel required"><label for="phone">Phone</label><input type="tel" id="phone" maxlength="255" required="required" name="phone" /></div><div class="input select"><label for="reseller-program-id">Reseller Program</label><select id="reseller-program-id" name="reseller_program_id"><option value="1">1</option><option value="2">2</option></select></div><div class="input select"><label for="bountee-user-id">Bountee User</label><select id="bountee-user-id" name="bountee_user_id"></select></div>    </fieldset>
+    <button type="submit">Submit</button>    </form></div>
     <footer class="footer">
         <span class="pull-right">
             Rewards Api
         </span>
         2017
 </footer></div>
-<script src="/rewardApis/debug_kit/js/toolbar.js" data-url="http://localhost/rewardApis/" data-id="884c2953-6ad0-40db-95d1-f8a6110e6263" id="__debug_kit"></script>
-<div id="changePasswordModal" role="dialog" tabindex="-1" class="modal fade">
-  <div role="document" class="modal-dialog">
-    <form action="/rewardApis/users/edit/3" data-toggle="validator" class="form-horizontal" accept-charset="utf-8" method="post"><div style="display:none;"><input type="hidden" value="POST" name="_method" /></div>    <div class="modal-content">
-      <div class="modal-header">
-        <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
-        <h4 class="modal-title">CHANGE_PASSWORD</h4>
-      </div>
-
-      <div class="modal-body">
-      <div style="" id="rsp_msg" class="alert">
-
-        </div>
-        <div class="form-group">
-          <label for="name" class="col-sm-4 control-label">Old Password</label>          <div class="col-sm-8">
-           <div class="input password required"><input type="password" placeholder="Enter Old Password" data-minlength="8" class="form-control" id="old_pwd" required="required" name="old_pwd" /></div>            <div class="help-block with-errors">PASSWORD_LENGTH</div>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="name" class="col-sm-4 control-label">New Password</label>          <div class="col-sm-8">
-           <div class="input password required"><input type="password" placeholder="Enter New Password" data-minlength="8" class="form-control" required="required" id="new_pwd" name="new_pwd" /></div>            <div class="help-block with-errors">PASSWORD_LENGTH</div>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="name" class="col-sm-4 control-label">Confirm New Password</label>          <div class="col-sm-8">
-           <div class="input password required"><input type="password" placeholder="Confirm Password" data-match-error="__('MISMATCH')" data-match="#new_pwd" data-minlength="8" class="form-control" required="required" id="cnf_new_pwd" name="cnf_new_pwd" /></div>            <div class="help-block with-errors">PASSWORD_LENGTH</div>
-          </div>
-        </div>
-
-
-      </div>
-
-      <div class="modal-footer text-center">
-        <button data-dismiss="modal" class="btn btn-danger" type="button">Close</button>
-        <button type="submit" id="saveUserPassword" class="btn btn-primary">Submit</button>      </div>
-          </div></form><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><iframe width="40" height="40" style="position: fixed; bottom: 0px; right: 0px; border: 0px none; outline: 0px none; overflow: hidden; z-index: 99999;" src="http://localhost/rewardApis/debug_kit/toolbar/884c2953-6ad0-40db-95d1-f8a6110e6263"></iframe></body><canvas id="fxdriver-screenshot-canvas" style="display: none;" width="1300" height="994"></canvas></html>
+<script src="/rewardApis/debug_kit/js/toolbar.js" data-url="http://localhost/rewardApis/" data-id="fbb61551-b9d8-43da-86a3-ea94ebf692d9" id="__debug_kit"></script>
+<iframe width="40" height="40" style="position: fixed; bottom: 0px; right: 0px; border: 0px none; outline: 0px none; overflow: hidden; z-index: 99999;" src="http://localhost/rewardApis/debug_kit/toolbar/fbb61551-b9d8-43da-86a3-ea94ebf692d9"></iframe></body><canvas id="fxdriver-screenshot-canvas" style="display: none;" width="1300" height="686"></canvas></html>

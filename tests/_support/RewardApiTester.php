@@ -221,12 +221,12 @@ class RewardApiTester extends \Codeception\Actor
 		public function positive_case_for_add_view_user($role, $firstname, $lastname, $username, $email, $phone, $password)
 		{
 			$I = $this;
-			$I->amGoingTo('add user');
-			$I->click('Users');
+			$I->amGoingTo('add staff user');
+			$I->click('Staff');
 			$I->wait(5);
-			$I->click('Add User');
+			$I->click('Add Staff');
 			$I->wait(5);
-			$I->seeInCurrentUrl('/users/add');
+			$I->seeInCurrentUrl('/staffs/add');
 			$I->selectOption(Locator::find('select', ['id' => 'role-id']), $role);
 			$I->fillField('#first-name', $firstname);
 			$I->fillField('#last-name', $lastname);
@@ -240,11 +240,11 @@ class RewardApiTester extends \Codeception\Actor
 
 			//View method
 
-			$I->amGoingTo('view user');
+			$I->amGoingTo('view staff user');
 			$I->wait(4);
-			$I->click('Users');
+			$I->click('Staff');
 			$I->wait(5);
-			$I->click(Locator::find('a', ['href' =>'/rewardApis/users']));
+			$I->click(Locator::find('a', ['href' =>'/rewardApis/staffs']));
 			$I->wait(5);
 	        $I->click(Locator::lastElement(Locator::find('a', ['class' => 'btn btn-xs btn-success'])));
 	        $I->wait(5);
@@ -259,10 +259,10 @@ class RewardApiTester extends \Codeception\Actor
 		public function positive_case_for_edit_delete_user($oldpwd, $newpwd, $confirmpwd)
 		{
 			$I = $this;
-			$I->amGoingTo('edit user');
-			$I->click('Users');
+			$I->amGoingTo('edit staff user');
+			$I->click('Staff');
 			$I->wait(5);
-			$I->click(Locator::find('a', ['href' => '/rewardApis/users']));
+			$I->click(Locator::find('a', ['href' => '/rewardApis/staffs']));
 			$I->wait(5);
 			$I->click(Locator::elementAt(Locator::find('a', ['class' => 'btn btn-xs btn-warning']), 2));
 			// $I->click(Locator::elementAt(Locator::find('a', ['class' => 'btn btn-xs btn-warning edit']),1));
@@ -297,9 +297,9 @@ class RewardApiTester extends \Codeception\Actor
 		{
 			$I = $this;
 			$I->amGoingTo('add user');
-			$I->click('Users');
+			$I->click('Staff');
 			$I->wait(5);
-			$I->click('Add User');
+			$I->click('Add Staff');
 			$I->wait(5);
 			$I->seeInCurrentUrl('/users/add');
 			$I->selectOption(Locator::find('select', ['id' => 'role-id']), $role);
@@ -329,9 +329,9 @@ class RewardApiTester extends \Codeception\Actor
 
 			$I->amGoingTo('view user');
 			$I->wait(4);
-			$I->click('Users');
+			$I->click('Staff');
 			$I->wait(5);
-			$I->click(Locator::find('a', ['href' =>'/rewardApis/users']));
+			$I->click(Locator::find('a', ['href' =>'/rewardApis/staffs']));
 			$I->wait(5);
 	        $I->click(Locator::lastElement(Locator::find('a', ['class' => 'btn btn-xs btn-success'])));
 	        $I->wait(5);
@@ -347,9 +347,9 @@ class RewardApiTester extends \Codeception\Actor
 		{
 			$I = $this;
 			$I->amGoingTo('edit user');
-			$I->click('Users');
+			$I->click('Satffs');
 			$I->wait(5);
-			$I->click(Locator::find('a', ['href' => '/rewardApis/users']));
+			$I->click(Locator::find('a', ['href' => '/rewardApis/staffs']));
 			$I->wait(5);
 			$I->click(Locator::elementAt(Locator::find('a', ['class' => 'btn btn-xs btn-warning']), 2));
 			// $I->click(Locator::elementAt(Locator::find('a', ['class' => 'btn btn-xs btn-warning edit']),1));
