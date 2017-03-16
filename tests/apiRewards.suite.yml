@@ -7,4 +7,4 @@ modules:
                 REST:
                     depends: PhpBrowser
                     # url: http://buzzy.twinspark.co/buzzyadmin/
-                    url: http://rewardapis.twinspark.co/dev/
+                    url: http://localhost/rewardApis/
